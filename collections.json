@@ -1,0 +1,11 @@
+{
+  "_doc": "合集型(多标的)研报配置。会议综述/行业横评类研报覆盖多个标的时在此声明，run_workflow.py 会为每个声明的 ticker 生成带各自行情的小节，generate_posters.py 自动渲染模块化合集海报(brief 含 ≥3 个 $名称(TICKER)$ 即判定为合集型)。注意：仍需先手动 fetch_prices 拉取这些 ticker。match=输入文件名中用于识别该合集的子串。",
+  "collections": [
+    {
+      "match": "Jefferies",
+      "source": "Jefferies",
+      "title": "软件 · 互联网 · AI 大会回顾",
+      "tickers": ["SNOW", "CRWV", "TEAM", "PCOR"]
+    }
+  ]
+}

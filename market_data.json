@@ -1,0 +1,526 @@
+{
+  "fetched_at": "2026-06-02T22:54:56.498533-04:00",
+  "prices": {
+    "APP": {
+      "ticker": "APP",
+      "close": 599.89,
+      "prev_close": 567.83,
+      "pct_change": 5.65,
+      "ext_price": 599.63,
+      "ext_pct": -0.04,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "🚀 大涨 $599.89 (+5.6%，前收 $567.83) [数据截至 05/28 23:28 EDT] | After-Hrs 盘后: $599.63 (-0.04%)"
+    },
+    "U": {
+      "ticker": "U",
+      "close": 26.73,
+      "prev_close": 27.28,
+      "pct_change": -2.02,
+      "ext_price": 26.72,
+      "ext_pct": -0.04,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📉 收跌 $26.73 (-2.0%，前收 $27.28) | After-Hrs 盘后: $26.72 (-0.04%)"
+    },
+    "COST": {
+      "ticker": "COST",
+      "close": 1012.06,
+      "prev_close": 995.75,
+      "pct_change": 1.64,
+      "ext_price": 1009.22,
+      "ext_pct": -0.28,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📈 收涨 $1,012.06 (+1.6%，前收 $995.75) | After-Hrs 盘后: $1,009.22 (-0.28%)"
+    },
+    "FUTU": {
+      "ticker": "FUTU",
+      "close": 137.03,
+      "prev_close": 139.86,
+      "pct_change": -2.02,
+      "ext_price": 139.94,
+      "ext_pct": 2.12,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📉 收跌 $137.03 (-2.0%，前收 $139.86) [数据截至 05/13 03:11 EDT] | After-Hrs 盘后: $139.94 (+2.12%)"
+    },
+    "NVDA": {
+      "ticker": "NVDA",
+      "close": 222.82,
+      "prev_close": 224.36,
+      "pct_change": -0.69,
+      "ext_price": 221.7913,
+      "ext_pct": -0.46,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "19:59 EDT",
+      "display": "📉 收跌 $222.82 (-0.7%，前收 $224.36) [数据截至 06/02 22:39 EDT] | After-Hrs 盘后: $221.79 (-0.46%) [19:59 EDT]"
+    },
+    "MCD": {
+      "ticker": "MCD",
+      "close": 283.7,
+      "prev_close": 284.1,
+      "pct_change": -0.14,
+      "ext_price": 284.43,
+      "ext_pct": 0.26,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📉 收跌 $283.70 (-0.1%，前收 $284.10) | After-Hrs 盘后: $284.43 (+0.26%)"
+    },
+    "01810": {
+      "ticker": "01810",
+      "close": 27.9,
+      "prev_close": 28.56,
+      "pct_change": -2.31,
+      "display": "📉 收跌 $27.90 (-2.3%，前收 $28.56) [数据截至 05/28 23:29 EDT]"
+    },
+    "NET": {
+      "ticker": "NET",
+      "close": 196.13,
+      "prev_close": 256.79,
+      "pct_change": -23.62,
+      "display": "📉 收跌 $196.13 (-23.6%，前收 $256.79)"
+    },
+    "COIN": {
+      "ticker": "COIN",
+      "close": 201.16,
+      "prev_close": 192.96,
+      "pct_change": 4.25,
+      "display": "📈 收涨 $201.16 (+4.2%，前收 $192.96)"
+    },
+    "DDOG": {
+      "ticker": "DDOG",
+      "close": 200.16,
+      "prev_close": 188.73,
+      "pct_change": 6.06,
+      "display": "🚀 大涨 $200.16 (+6.1%，前收 $188.73)"
+    },
+    "MCHP": {
+      "ticker": "MCHP",
+      "close": 99.09,
+      "prev_close": 101.58,
+      "pct_change": -2.45,
+      "display": "📉 收跌 $99.09 (-2.5%，前收 $101.58)"
+    },
+    "PTON": {
+      "ticker": "PTON",
+      "close": 5.69,
+      "prev_close": 5.66,
+      "pct_change": 0.53,
+      "display": "📈 收涨 $5.69 (+0.5%，前收 $5.66)"
+    },
+    "ASML": {
+      "ticker": "ASML",
+      "close": 1592.02,
+      "prev_close": 1516.6,
+      "pct_change": 4.97,
+      "display": "📈 收涨 $1,592.02 (+5.0%，前收 $1,516.60)"
+    },
+    "SQ": {
+      "ticker": "SQ",
+      "close": 86.96,
+      "prev_close": 86.96,
+      "pct_change": 0.0,
+      "display": "📉 收跌 $86.96 (+0.0%，前收 $86.96)"
+    },
+    "DELL": {
+      "ticker": "DELL",
+      "close": 252.8,
+      "prev_close": 242.93,
+      "pct_change": 4.06,
+      "ext_price": 257.74,
+      "ext_pct": 1.95,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📈 收涨 $252.80 (+4.1%，前收 $242.93) [数据截至 05/22 02:39 EDT] | After-Hrs 盘后: $257.74 (+1.95%)"
+    },
+    "XYZ": {
+      "ticker": "XYZ",
+      "close": 74.85,
+      "prev_close": 70.14,
+      "pct_change": 6.72,
+      "display": "🚀 大涨 $74.85 (+6.7%，前收 $70.14)"
+    },
+    "RKLB": {
+      "ticker": "RKLB",
+      "close": 117.35,
+      "prev_close": 105.47,
+      "pct_change": 11.26,
+      "ext_price": 113.59,
+      "ext_pct": -3.2,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "🚀 大涨 $117.35 (+11.3%，前收 $105.47) | After-Hrs 盘后: $113.59 (-3.20%)"
+    },
+    "CRCL": {
+      "ticker": "CRCL",
+      "close": 131.76,
+      "prev_close": 113.67,
+      "pct_change": 15.91,
+      "ext_price": 127.31,
+      "ext_pct": -3.38,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "🚀 大涨 $131.76 (+15.9%，前收 $113.67) | After-Hrs 盘后: $127.31 (-3.38%)"
+    },
+    "PWRD": {
+      "ticker": "PWRD",
+      "close": 114.0048,
+      "prev_close": 111.87,
+      "pct_change": 1.91,
+      "ext_price": 114.0048,
+      "ext_pct": 0.0,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📈 收涨 $114.00 (+1.9%，前收 $111.87) | After-Hrs 盘后: $114.00 (+0.00%)"
+    },
+    "FLY": {
+      "ticker": "FLY",
+      "close": 38.24,
+      "prev_close": 39.68,
+      "pct_change": -3.63,
+      "ext_price": 38.02,
+      "ext_pct": -0.58,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📉 收跌 $38.24 (-3.6%，前收 $39.68) [数据截至 05/11 23:19 EDT] | After-Hrs 盘后: $38.02 (-0.58%)"
+    },
+    "HIMS": {
+      "ticker": "HIMS",
+      "close": 25.03,
+      "prev_close": 29.14,
+      "pct_change": -14.1,
+      "ext_price": 24.99,
+      "ext_pct": -0.16,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📉 收跌 $25.03 (-14.1%，前收 $29.14) [数据截至 05/13 03:11 EDT] | After-Hrs 盘后: $24.99 (-0.16%)"
+    },
+    "MDB": {
+      "ticker": "MDB",
+      "close": 308.72,
+      "prev_close": 294.65,
+      "pct_change": 4.78,
+      "ext_price": 311.0,
+      "ext_pct": 0.74,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📈 收涨 $308.72 (+4.8%，前收 $294.65) [数据截至 05/13 03:11 EDT] | After-Hrs 盘后: $311.00 (+0.74%)"
+    },
+    "CRM": {
+      "ticker": "CRM",
+      "close": 171.31,
+      "prev_close": 177.49,
+      "pct_change": -3.48,
+      "ext_price": 171.65,
+      "ext_pct": 0.2,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📉 收跌 $171.31 (-3.5%，前收 $177.49) [数据截至 05/13 03:11 EDT] | After-Hrs 盘后: $171.65 (+0.20%)"
+    },
+    "AVGO": {
+      "ticker": "AVGO",
+      "close": 481.57,
+      "prev_close": 459.97,
+      "pct_change": 4.7,
+      "ext_price": 495.0,
+      "ext_pct": 2.79,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "19:59 EDT",
+      "display": "📈 收涨 $481.57 (+4.7%，前收 $459.97) [数据截至 06/02 22:39 EDT] | After-Hrs 盘后: $495.00 (+2.79%) [19:59 EDT]"
+    },
+    "AMAT": {
+      "ticker": "AMAT",
+      "close": 431.2,
+      "prev_close": 443.62,
+      "pct_change": -2.8,
+      "ext_price": 434.63,
+      "ext_pct": 0.8,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📉 收跌 $431.20 (-2.8%，前收 $443.62) [数据截至 05/13 03:12 EDT] | After-Hrs 盘后: $434.63 (+0.80%)"
+    },
+    "NBIS": {
+      "ticker": "NBIS",
+      "close": 207.27,
+      "prev_close": 179.11,
+      "pct_change": 15.72,
+      "ext_price": 207.5,
+      "ext_pct": 0.11,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "🚀 大涨 $207.27 (+15.7%，前收 $179.11) [数据截至 05/13 23:03 EDT] | After-Hrs 盘后: $207.50 (+0.11%)"
+    },
+    "OKLO": {
+      "ticker": "OKLO",
+      "close": 69.66,
+      "prev_close": 73.63,
+      "pct_change": -5.39,
+      "ext_price": 69.07,
+      "ext_pct": -0.85,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📉 收跌 $69.66 (-5.4%，前收 $73.63) [数据截至 05/13 23:03 EDT] | After-Hrs 盘后: $69.07 (-0.85%)"
+    },
+    "JD": {
+      "ticker": "JD",
+      "close": 33.77,
+      "prev_close": 31.49,
+      "pct_change": 7.24,
+      "ext_price": 33.54,
+      "ext_pct": -0.68,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "🚀 大涨 $33.77 (+7.2%，前收 $31.49) [数据截至 05/13 23:03 EDT] | After-Hrs 盘后: $33.54 (-0.68%)"
+    },
+    "MNSO": {
+      "ticker": "MNSO",
+      "close": 14.88,
+      "prev_close": 14.11,
+      "pct_change": 5.46,
+      "ext_price": 14.89,
+      "ext_pct": 0.07,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "🚀 大涨 $14.88 (+5.5%，前收 $14.11) [数据截至 05/13 23:03 EDT] | After-Hrs 盘后: $14.89 (+0.07%)"
+    },
+    "BABA": {
+      "ticker": "BABA",
+      "close": 145.81,
+      "prev_close": 134.78,
+      "pct_change": 8.18,
+      "ext_price": 143.33,
+      "ext_pct": -1.7,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "🚀 大涨 $145.81 (+8.2%，前收 $134.78) [数据截至 05/13 23:03 EDT] | After-Hrs 盘后: $143.33 (-1.70%)"
+    },
+    "00700": {
+      "ticker": "00700",
+      "close": 456.6,
+      "prev_close": 460.0,
+      "pct_change": -0.74,
+      "display": "📉 收跌 $456.60 (-0.7%，前收 $460.00) [数据截至 05/19 23:27 EDT]"
+    },
+    "09988": {
+      "ticker": "09988",
+      "close": 140.1,
+      "prev_close": 132.8,
+      "pct_change": 5.5,
+      "display": "🚀 大涨 $140.10 (+5.5%，前收 $132.80) [数据截至 05/13 23:04 EDT]"
+    },
+    "09888": {
+      "ticker": "09888",
+      "close": 135.8,
+      "prev_close": 134.7,
+      "pct_change": 0.82,
+      "display": "📈 收涨 $135.80 (+0.8%，前收 $134.70) [数据截至 05/18 23:21 EDT]"
+    },
+    "MU": {
+      "ticker": "MU",
+      "close": 698.74,
+      "prev_close": 681.54,
+      "pct_change": 2.52,
+      "ext_price": 703.26,
+      "ext_pct": 0.65,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📈 收涨 $698.74 (+2.5%，前收 $681.54) [数据截至 05/19 23:26 EDT] | After-Hrs 盘后: $703.26 (+0.65%)"
+    },
+    "SNDK": {
+      "ticker": "SNDK",
+      "close": 1383.29,
+      "prev_close": 1333.01,
+      "pct_change": 3.77,
+      "ext_price": 1379.5,
+      "ext_pct": -0.27,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📈 收涨 $1,383.29 (+3.8%，前收 $1,333.01) [数据截至 05/19 23:27 EDT] | After-Hrs 盘后: $1,379.50 (-0.27%)"
+    },
+    "ARM": {
+      "ticker": "ARM",
+      "close": 306.51,
+      "prev_close": 298.23,
+      "pct_change": 2.78,
+      "display": "📈 收涨 $306.51 (+2.8%，前收 $298.23) [数据截至 05/26 05:16 EDT]"
+    },
+    "AMD": {
+      "ticker": "AMD",
+      "close": 467.51,
+      "prev_close": 449.59,
+      "pct_change": 3.99,
+      "display": "📈 收涨 $467.51 (+4.0%，前收 $449.59) [数据截至 05/26 05:16 EDT]"
+    },
+    "INTC": {
+      "ticker": "INTC",
+      "close": 119.84,
+      "prev_close": 118.5,
+      "pct_change": 1.13,
+      "display": "📈 收涨 $119.84 (+1.1%，前收 $118.50) [数据截至 05/26 05:17 EDT]"
+    },
+    "AMZN": {
+      "ticker": "AMZN",
+      "close": 268.46,
+      "prev_close": 265.01,
+      "pct_change": 1.3,
+      "ext_price": 269.24,
+      "ext_pct": 0.29,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📈 收涨 $268.46 (+1.3%，前收 $265.01) [数据截至 05/22 02:39 EDT] | After-Hrs 盘后: $269.24 (+0.29%)"
+    },
+    "GOOGL": {
+      "ticker": "GOOGL",
+      "close": 382.97,
+      "prev_close": 387.66,
+      "pct_change": -1.21,
+      "display": "📉 收跌 $382.97 (-1.2%，前收 $387.66) [数据截至 05/26 05:16 EDT]"
+    },
+    "INTU": {
+      "ticker": "INTU",
+      "close": 319.94,
+      "prev_close": 307.07,
+      "pct_change": 4.19,
+      "display": "📈 收涨 $319.94 (+4.2%，前收 $307.07) [数据截至 05/26 05:16 EDT]"
+    },
+    "SNOW": {
+      "ticker": "SNOW",
+      "close": 261.14,
+      "prev_close": 280.16,
+      "pct_change": -6.79,
+      "ext_price": 258.2851,
+      "ext_pct": -1.09,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "19:59 EDT",
+      "display": "📉 收跌 $261.14 (-6.8%，前收 $280.16) [数据截至 06/02 22:53 EDT] | After-Hrs 盘后: $258.29 (-1.09%) [19:59 EDT]"
+    },
+    "SMTC": {
+      "ticker": "SMTC",
+      "close": 156.78,
+      "prev_close": 146.53,
+      "pct_change": 7.0,
+      "display": "🚀 大涨 $156.78 (+7.0%，前收 $146.53) [数据截至 05/26 05:17 EDT]"
+    },
+    "MRVL": {
+      "ticker": "MRVL",
+      "close": 204.83,
+      "prev_close": 198.7,
+      "pct_change": 3.09,
+      "ext_price": 203.52,
+      "ext_pct": -0.64,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📈 收涨 $204.83 (+3.1%，前收 $198.70) [数据截至 05/28 23:28 EDT] | After-Hrs 盘后: $203.52 (-0.64%)"
+    },
+    "AMBA": {
+      "ticker": "AMBA",
+      "close": 87.55,
+      "prev_close": 83.64,
+      "pct_change": 4.67,
+      "display": "📈 收涨 $87.55 (+4.7%，前收 $83.64) [数据截至 05/26 05:17 EDT]"
+    },
+    "01024": {
+      "ticker": "01024",
+      "close": 45.8,
+      "prev_close": 45.64,
+      "pct_change": 0.35,
+      "display": "📈 收涨 $45.80 (+0.4%，前收 $45.64) [数据截至 05/26 05:17 EDT]"
+    },
+    "CRWV": {
+      "ticker": "CRWV",
+      "close": 119.27,
+      "prev_close": 124.82,
+      "pct_change": -4.45,
+      "ext_price": 119.22,
+      "ext_pct": -0.04,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "19:59 EDT",
+      "display": "📉 收跌 $119.27 (-4.4%，前收 $124.82) [数据截至 06/02 22:53 EDT] | After-Hrs 盘后: $119.22 (-0.04%) [19:59 EDT]"
+    },
+    "PDD": {
+      "ticker": "PDD",
+      "close": 83.03,
+      "prev_close": 86.61,
+      "pct_change": -4.13,
+      "ext_price": 82.91,
+      "ext_pct": -0.14,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📉 收跌 $83.03 (-4.1%，前收 $86.61) [数据截至 05/28 23:28 EDT] | After-Hrs 盘后: $82.91 (-0.14%)"
+    },
+    "MSFT": {
+      "ticker": "MSFT",
+      "close": 441.31,
+      "prev_close": 460.52,
+      "pct_change": -4.17,
+      "ext_price": 438.4248,
+      "ext_pct": -0.65,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "19:59 EDT",
+      "display": "📉 收跌 $441.31 (-4.2%，前收 $460.52) [数据截至 06/02 22:54 EDT] | After-Hrs 盘后: $438.42 (-0.65%) [19:59 EDT]"
+    },
+    "HPQ": {
+      "ticker": "HPQ",
+      "close": 25.01,
+      "prev_close": 25.49,
+      "pct_change": -1.88,
+      "ext_price": 26.02,
+      "ext_pct": 4.04,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📉 收跌 $25.01 (-1.9%，前收 $25.49) [数据截至 05/28 23:29 EDT] | After-Hrs 盘后: $26.02 (+4.04%)"
+    },
+    "KC": {
+      "ticker": "KC",
+      "close": 12.62,
+      "prev_close": 13.12,
+      "pct_change": -3.81,
+      "ext_price": 12.22,
+      "ext_pct": -3.17,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "",
+      "display": "📉 收跌 $12.62 (-3.8%，前收 $13.12) [数据截至 05/28 23:29 EDT] | After-Hrs 盘后: $12.22 (-3.17%)"
+    },
+    "03690": {
+      "ticker": "03690",
+      "close": 73.9,
+      "prev_close": 73.3,
+      "pct_change": 0.82,
+      "display": "📈 收涨 $73.90 (+0.8%，前收 $73.30) [数据截至 05/28 23:29 EDT]"
+    },
+    "HPE": {
+      "ticker": "HPE",
+      "close": 56.15,
+      "prev_close": 47.0,
+      "pct_change": 19.47,
+      "ext_price": 54.85,
+      "ext_pct": -2.32,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "19:59 EDT",
+      "display": "🚀 大涨 $56.15 (+19.5%，前收 $47.00) [数据截至 06/02 22:39 EDT] | After-Hrs 盘后: $54.85 (-2.32%) [19:59 EDT]"
+    },
+    "TEAM": {
+      "ticker": "TEAM",
+      "close": 109.1,
+      "prev_close": 115.95,
+      "pct_change": -5.91,
+      "ext_price": 108.0,
+      "ext_pct": -1.01,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "19:59 EDT",
+      "display": "📉 收跌 $109.10 (-5.9%，前收 $115.95) [数据截至 06/02 22:53 EDT] | After-Hrs 盘后: $108.00 (-1.01%) [19:59 EDT]"
+    },
+    "PCOR": {
+      "ticker": "PCOR",
+      "close": 52.7,
+      "prev_close": 55.23,
+      "pct_change": -4.58,
+      "ext_price": 52.7,
+      "ext_pct": 0.0,
+      "ext_tag": "After-Hrs 盘后",
+      "ext_time": "19:57 EDT",
+      "display": "📉 收跌 $52.70 (-4.6%，前收 $55.23) [数据截至 06/02 22:53 EDT] | After-Hrs 盘后: $52.70 (+0.00%) [19:57 EDT]"
+    }
+  }
+}

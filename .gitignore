@@ -1,0 +1,25 @@
+# 数据与产物（不入库）
+研报input/
+海报/
+output/
+*.cache/
+.cache/
+
+# 本地行情快照（运行时生成，可保留示例）
+# market_data.json
+
+# 环境与密钥
+.env
+*.properties
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 系统
+.DS_Store
+
+# 形象素材（不公开）
+小老虎.jpeg
