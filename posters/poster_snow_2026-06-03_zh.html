@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jefferies 软件·互联网·AI 大会回顾</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#d4d4d4;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:48px 24px}
+.poster{width:900px;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.18)}
+.header{padding:30px 40px 26px;border-bottom:1px solid #ececec;display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+.header-left{flex:1}
+.header h1{font-size:27px;font-weight:900;color:#0f0f0f;line-height:1.2;margin-bottom:8px;letter-spacing:-.5px}
+.header h1 em{font-style:normal}
+.header .sub{font-size:13px;color:#666;line-height:1.55;max-width:560px}
+.stock-badge{flex-shrink:0;border-radius:10px;padding:12px 18px;text-align:center}
+.sb-label{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#aaa;margin-bottom:3px}
+.sb-val{font-size:26px;font-weight:900;letter-spacing:-.5px;line-height:1}
+.sb-sub{font-size:10.5px;color:#aaa;margin-top:3px}
+.body{display:grid;grid-template-columns:1fr 1fr}
+.col{padding:28px 36px}
+.col-left{border-right:1px solid #ececec}
+.keyword-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
+.kw-tag{font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;border:1.5px solid;letter-spacing:.2px;white-space:nowrap}
+.col-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#aaa;margin-bottom:20px}
+.big-num-block{margin-bottom:22px}
+.bn-label{font-size:12px;color:#888;font-weight:500;margin-bottom:2px}
+.bn-value{font-size:42px;font-weight:900;color:#0f0f0f;letter-spacing:-1.5px;line-height:1.05}
+.bn-sub{display:flex;align-items:center;gap:8px;margin-top:5px;font-size:13px;color:#555}
+.chip{display:inline-flex;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.chip.g{background:#e8f5e9;color:#2e7d32}
+.chip.r{background:#fce4ec;color:#c62828}
+.chip.b{background:#e3f2fd;color:#1565c0}
+.chip.n{background:#f5f5f5;color:#555}
+.comp-table{width:100%;border-collapse:collapse;margin-bottom:22px}
+.comp-table tr{border-bottom:1px solid #f4f4f4}
+.comp-table td{padding:9px 0;font-size:13px;vertical-align:middle}
+.comp-table .cn{color:#666;width:130px}
+.comp-table .ca{font-weight:700;color:#111}
+.comp-table .cb{text-align:right}
+.seg-title{font-size:10.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#bbb;margin-bottom:12px}
+.seg-bar-row{margin-bottom:12px}
+.seg-bar-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;font-size:12.5px}
+.seg-bar-name{display:flex;align-items:center;gap:9px;color:#444}
+.seg-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.seg-bar-vals{display:flex;gap:8px;align-items:center}
+.seg-val{font-weight:700;color:#111}
+.seg-yoy{font-size:11.5px;font-weight:700}
+.seg-track{height:7px;background:#f0f0f0;border-radius:4px;overflow:hidden}
+.seg-fill{height:100%;border-radius:4px}
+.guidance-box{border-radius:12px;padding:18px 22px;margin-bottom:14px}
+.g-tag{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+.g-value{font-size:44px;font-weight:900;color:#0f0f0f;letter-spacing:-1.5px;line-height:1.05}
+.g-beat{font-size:13px;color:#555;margin-top:6px}
+.g-beat strong{color:#2e7d32}
+.g-detail{font-size:12px;color:#999;margin-top:5px}
+.mini-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#ececec;border-radius:10px;overflow:hidden;margin-bottom:14px}
+.mini-stat{background:#fff;padding:14px 10px;text-align:center}
+.mini-stat .ms-val{font-size:22px;font-weight:900;letter-spacing:-.5px;line-height:1}
+.mini-stat .ms-label{font-size:10.5px;color:#888;margin-top:3px;line-height:1.3}
+.theme-box{border-left:3px solid;border-radius:0 8px 8px 0;padding:13px 16px;font-size:13px;margin-bottom:10px}
+.theme-box .tb-title{font-weight:700;color:#111;margin-bottom:4px}
+.theme-box .tb-body{color:#555;line-height:1.55}
+.theme-box .tb-body b{color:#333}
+.bottom-bar{padding:15px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.bb-left{display:flex;align-items:center;gap:20px}
+.bb-bank{font-size:13px;font-weight:700;color:#fff}
+.bb-rating{font-size:11px;padding:3px 10px;border-radius:4px;font-weight:600}
+.bb-note{font-size:12px;color:#888}
+.bb-pt-block{text-align:right}
+.bb-pt{font-size:38px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1}
+.bb-pt-sub{font-size:11px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+.bb-brand{font-size:10px;font-weight:600;color:#555;letter-spacing:1px;text-transform:uppercase}
+
+.coll-head{padding:26px 36px}
+.coll-src{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.coll-title{font-size:32px;font-weight:900;color:#fff;letter-spacing:-.5px;line-height:1.1;margin:6px 0}
+.coll-sub{font-size:14px;color:rgba(255,255,255,.82);line-height:1.4}
+.tk-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:28px 36px}
+.tk-card{border:1px solid #e3e8f0;border-radius:12px;padding:18px 20px;background:#fff}
+.tk-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:4px}
+.tk-name{font-size:18px;font-weight:900;color:#14213d;line-height:1.1}
+.tk-chip{font-size:13px;font-weight:800;padding:4px 10px;border-radius:6px;color:#fff;white-space:nowrap}
+.tk-chip.up{background:#15a34a}
+.tk-chip.down{background:#dc2626}
+.tk-chip.flat{background:#6b7280}
+.tk-sub{font-size:12px;color:#6b7280;margin-bottom:10px}
+.tk-card ul{margin:0;padding-left:16px}
+.tk-card li{font-size:13px;color:#374151;margin:4px 0;line-height:1.42}
+.coll-foot{display:flex;justify-content:space-between;align-items:center;padding:16px 36px}
+.coll-foot .left{font-size:12px;color:rgba(255,255,255,.85)}
+.coll-foot .right{font-size:14px;font-weight:900;color:#FFE100}
+
+/* 额外修饰 */
+.coll-head{background:#1B2A4A}
+.coll-foot{background:#1B2A4A}
+.tk-card{transition:box-shadow .2s}
+.tk-card:hover{box-shadow:0 4px 18px rgba(27,42,74,.10)}
+.divider-label{font-size:10.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#aaa;padding:0 36px 0 36px;margin-bottom:-6px}
+.tag-row{display:flex;flex-wrap:wrap;gap:7px;padding:0 36px 20px 36px}
+.tag-pill{font-size:11px;font-weight:700;padding:4px 11px;border-radius:20px;background:#eef2ff;color:#3730a3;border:1.5px solid #c7d2fe;letter-spacing:.2px}
+.tag-pill.orange{background:#fff7ed;color:#c2410c;border-color:#fed7aa}
+.tag-pill.green{background:#f0fdf4;color:#15803d;border-color:#bbf7d0}
+.tag-pill.red{background:#fef2f2;color:#b91c1c;border-color:#fecaca}
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- ZONE 1 头部 -->
+  <div class="coll-head">
+    <div class="coll-src">Jefferies 研究 · 年度科技大会纪要</div>
+    <div class="coll-title">软件 · 互联网 · AI 大会回顾</div>
+    <div class="coll-sub">市场低估"token 路径"受益者成长速度——真正赢家是工作负载随 AI 推理量直接扩张的公司</div>
+  </div>
+
+  <!-- 主题标签行 -->
+  <div style="padding:18px 36px 0 36px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+    <span class="tag-pill">🤖 AI 推理需求爆发</span>
+    <span class="tag-pill orange">token 路径卡位战</span>
+    <span class="tag-pill green">60+ 企业/VC 参会</span>
+    <span class="tag-pill red">⚠️ 数据中心 3-5 年后或饱和</span>
+    <span class="tag-pill" style="background:#f5f3ff;color:#6d28d9;border-color:#ddd6fe;">大会基调强于股价表现</span>
+  </div>
+
+  <!-- ZONE 2 卡片网格 -->
+  <div class="tk-grid">
+
+    <!-- SNOW -->
+    <div class="tk-card">
+      <div class="tk-top">
+        <span class="tk-name">Snowflake</span>
+        <span class="tk-chip down">$261.14 &nbsp;−6.8%</span>
+      </div>
+      <div class="tk-sub">NYSE: SNOW &nbsp;·&nbsp; 盘后 $258.29 (−1.09%)</div>
+      <ul>
+        <li>本次大会<strong>最干净的软件成长故事</strong>——代理式 AI 工作负载直接驱动查询量与算力消耗提升</li>
+        <li><strong>数据重力</strong>将企业 AI 牢牢锁在平台内，token 路径卡位优势已在近期财报中得到明确验证</li>
+        <li>Cortex Code 与 Snowflake Intelligence 已开始对营收产生更为<strong>实质性的贡献</strong></li>
+      </ul>
+    </div>
+
+    <!-- CRWV -->
+    <div class="tk-card">
+      <div class="tk-top">
+        <span class="tk-name">CoreWeave</span>
+        <span class="tk-chip down">$119.27 &nbsp;−4.4%</span>
+      </div>
+      <div class="tk-sub">NASDAQ: CRWV &nbsp;·&nbsp; 盘后 $119.22 (−0.04%)</div>
+      <ul>
+        <li>CFO Nitin Agrawal 披露：需求来源<strong>已以推理工作负载为主</strong>，印证客户 AI 项目产生真实回报</li>
+        <li>合同签约即锁定营收与大部分成本，EBIT 利润率预计 <strong>Q2–Q3 间迎来拐点</strong>，2026 年底达低两位数</li>
+        <li>网络、CPU、软件三条新业务线各自有望于 <strong>2026 年底突破 $100M ARR</strong>；首座自建数据中心 2026 年内上线</li>
+      </ul>
+    </div>
+
+    <!-- TEAM -->
+    <div class="tk-card">
+      <div class="tk-top">
+        <span class="tk-name">Atlassian</span>
+        <span class="tk-chip down">$109.10 &nbsp;−5.9%</span>
+      </div>
+      <div class="tk-sub">NASDAQ: TEAM &nbsp;·&nbsp; 盘后 $108.00 (−1.01%)</div>
+      <ul>
+        <li>核心用户群 <strong>65–77% 为非开发者</strong>，直接戳破"AI 将替代 TEAM 核心用户"的空头逻辑</li>
+        <li>Teamwork Graph 加持下，Claude Code 答案质量提升 <strong>44%</strong>，同时 token 消耗降低 <strong>48%</strong></li>
+        <li>注意：FY27 营收因大单提前确认将呈<strong>负增长</strong>，FY28 方重回加速，需跨越短期扰动</li>
+      </ul>
+    </div>
+
+    <!-- PCOR -->
+    <div class="tk-card">
+      <div class="tk-top">
+        <span class="tk-name">Procore Technologies</span>
+        <span class="tk-chip down">$52.70 &nbsp;−4.6%</span>
+      </div>
+      <div class="tk-sub">NYSE: PCOR &nbsp;·&nbsp; 盘后 $52.70 (+0.00%)</div>
+      <ul>
+        <li>来自 Ansys 的新管理团队磨合顺畅，GTM 变革冲击幅度<strong>远低于 18 个月前预期</strong>；半数客户建筑总量跑在平台上，数据护城河深厚</li>
+        <li>建设专家直言 <strong>25 年职业生涯中从未见过更好的施工软件</strong>，几乎无惧 vibe coding 颠覆威胁</li>
+        <li>国际收入当前仅占低十几%，对标 Ansys 近 <strong>50%</strong> 占比存在显著扩张空间；<strong>Rule of 40</strong> 是管理层锚定的中长期目标</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ZONE 3 底栏 -->
+  <div class="coll-foot">
+    <div class="left">⚠️ 关键风险：数据中心需求积压延伸至 2027 年，但建设专家坦言 3–5 年后市场或趋于饱和，超预期建设节奏能否持续仍是未解之问 &nbsp;·&nbsp; 仅供社区讨论，不构成投资建议</div>
+    <div class="right">Investing Community</div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HPE Q2 FY2026 Earnings — Goldman Sachs</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#d4d4d4;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:48px 24px}
+.poster{width:900px;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.18)}
+.header{padding:30px 40px 26px;border-bottom:1px solid #ececec;display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+.header-left{flex:1}
+.header h1{font-size:27px;font-weight:900;color:#0f0f0f;line-height:1.2;margin-bottom:8px;letter-spacing:-.5px}
+.header h1 em{font-style:normal}
+.header .sub{font-size:13px;color:#666;line-height:1.55;max-width:560px}
+.stock-badge{flex-shrink:0;border-radius:10px;padding:12px 18px;text-align:center}
+.sb-label{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#aaa;margin-bottom:3px}
+.sb-val{font-size:26px;font-weight:900;letter-spacing:-.5px;line-height:1}
+.sb-sub{font-size:10.5px;color:#aaa;margin-top:3px}
+.body{display:grid;grid-template-columns:1fr 1fr}
+.col{padding:28px 36px}
+.col-left{border-right:1px solid #ececec}
+.keyword-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
+.kw-tag{font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;border:1.5px solid;letter-spacing:.2px;white-space:nowrap}
+.col-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#aaa;margin-bottom:20px}
+.big-num-block{margin-bottom:22px}
+.bn-label{font-size:12px;color:#888;font-weight:500;margin-bottom:2px}
+.bn-value{font-size:42px;font-weight:900;color:#0f0f0f;letter-spacing:-1.5px;line-height:1.05}
+.bn-sub{display:flex;align-items:center;gap:8px;margin-top:5px;font-size:13px;color:#555}
+.chip{display:inline-flex;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.chip.g{background:#e8f5e9;color:#2e7d32}
+.chip.r{background:#fce4ec;color:#c62828}
+.chip.b{background:#e3f2fd;color:#1565c0}
+.chip.n{background:#f5f5f5;color:#555}
+.comp-table{width:100%;border-collapse:collapse;margin-bottom:22px}
+.comp-table tr{border-bottom:1px solid #f4f4f4}
+.comp-table td{padding:9px 0;font-size:13px;vertical-align:middle}
+.comp-table .cn{color:#666;width:130px}
+.comp-table .ca{font-weight:700;color:#111}
+.comp-table .cb{text-align:right}
+.seg-title{font-size:10.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#bbb;margin-bottom:12px}
+.seg-bar-row{margin-bottom:12px}
+.seg-bar-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;font-size:12.5px}
+.seg-bar-name{display:flex;align-items:center;gap:9px;color:#444}
+.seg-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.seg-bar-vals{display:flex;gap:8px;align-items:center}
+.seg-val{font-weight:700;color:#111}
+.seg-yoy{font-size:11.5px;font-weight:700}
+.seg-track{height:7px;background:#f0f0f0;border-radius:4px;overflow:hidden}
+.seg-fill{height:100%;border-radius:4px}
+.guidance-box{border-radius:12px;padding:18px 22px;margin-bottom:14px}
+.g-tag{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+.g-value{font-size:44px;font-weight:900;color:#0f0f0f;letter-spacing:-1.5px;line-height:1.05}
+.g-beat{font-size:13px;color:#555;margin-top:6px}
+.g-beat strong{color:#2e7d32}
+.g-detail{font-size:12px;color:#999;margin-top:5px}
+.mini-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#ececec;border-radius:10px;overflow:hidden;margin-bottom:14px}
+.mini-stat{background:#fff;padding:14px 10px;text-align:center}
+.mini-stat .ms-val{font-size:22px;font-weight:900;letter-spacing:-.5px;line-height:1}
+.mini-stat .ms-label{font-size:10.5px;color:#888;margin-top:3px;line-height:1.3}
+.theme-box{border-left:3px solid;border-radius:0 8px 8px 0;padding:13px 16px;font-size:13px;margin-bottom:10px}
+.theme-box .tb-title{font-weight:700;color:#111;margin-bottom:4px}
+.theme-box .tb-body{color:#555;line-height:1.55}
+.theme-box .tb-body b{color:#333}
+.bottom-bar{padding:15px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.bb-left{display:flex;align-items:center;gap:20px}
+.bb-bank{font-size:13px;font-weight:700;color:#fff}
+.bb-rating{font-size:11px;padding:3px 10px;border-radius:4px;font-weight:600}
+.bb-note{font-size:12px;color:#888}
+.bb-pt-block{text-align:right}
+.bb-pt{font-size:38px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1}
+.bb-pt-sub{font-size:11px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+.bb-brand{font-size:10px;font-weight:600;color:#555;letter-spacing:1px;text-transform:uppercase}
+.analyst-bar{display:flex;align-items:center;justify-content:space-between;padding:22px 40px;gap:16px}
+.ab-bank-name{font-size:28px;font-weight:900;color:#fff;letter-spacing:-.5px;line-height:1.1}
+.ab-bank-sub{display:inline-flex;font-size:13px;font-weight:700;padding:3px 12px;border-radius:4px;margin-top:8px}
+.ab-pt-block{text-align:center}
+.ab-pt-label{font-size:10px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.55);text-transform:uppercase;margin-bottom:4px}
+.ab-pt-val{font-size:52px;font-weight:900;color:#fff;letter-spacing:-2px;line-height:1}
+.ab-pt-delta{font-size:12px;color:rgba(255,255,255,.65);margin-top:5px}
+.ab-company{text-align:right}
+.ab-company-name{font-size:28px;font-weight:900;color:#fff;letter-spacing:-.5px;line-height:1.1}
+.ab-company-sub{font-size:13px;color:rgba(255,255,255,.65);margin-top:5px}
+.logo-hero{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 0;gap:12px}
+.logo-hero .logo-wordmark{font-size:28px;font-weight:900;letter-spacing:-1px}
+
+/* HPE Brand */
+.hpe-bg{background:#01A982;}
+.hpe-text{color:#01A982;}
+.hpe-border{border-color:#01A982;}
+.kw-tag.hpe{border-color:#01A982;color:#01A982;}
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- ZONE 1: ANALYST BAR -->
+  <div class="analyst-bar hpe-bg">
+    <div class="ab-bank">
+      <div class="ab-bank-name">Goldman Sachs</div>
+      <div><span class="ab-bank-sub" style="background:#2e7d32;color:#fff;">BUY</span></div>
+    </div>
+    <div class="ab-pt-block">
+      <div class="ab-pt-label">Price Target</div>
+      <div class="ab-pt-val">$32</div>
+      <div class="ab-pt-delta">Based on 11x NTM+1Y EPS · 12-Month Target</div>
+    </div>
+    <div class="ab-company">
+      <div class="ab-company-name">Hewlett Packard Enterprise</div>
+      <div class="ab-company-sub">NYSE: HPE</div>
+    </div>
+  </div>
+
+  <!-- ZONE 2: HEADLINE BLOCK -->
+  <div class="header">
+    <div class="header-left">
+      <h1>HPE Q2 FY2026: <em>Cloud &amp; AI Profitability Inflection Drives Massive EPS Beat</em></h1>
+      <p class="sub">HPE delivered a blowout quarter as Cloud &amp; AI EBIT margin of 12.4% surged well past guidance and consensus, while full-year EPS guidance was raised by over 40% — validating the transition from AI server scale-up to margin realization. FY2027 targets issued for the first time anchor long-term re-rating.</p>
+    </div>
+  </div>
+
+  <!-- ZONE 3: TWO-COLUMN BODY -->
+  <div class="body">
+    <!-- LEFT COL -->
+    <div class="col col-left">
+      <div class="col-label">Financial Performance vs. Consensus</div>
+
+      <div class="big-num-block">
+        <div class="bn-label">Q2 FY2026 Revenue</div>
+        <div class="bn-value">$10.7B</div>
+        <div class="bn-sub">
+          <span class="chip g">+7% vs GS Est.</span>
+          <span style="color:#888;">vs GS $10.1B</span>
+        </div>
+      </div>
+
+      <table class="comp-table">
+        <tr>
+          <td class="cn">Revenue</td>
+          <td class="ca">$10.7B</td>
+          <td class="cb"><span class="chip g">Beat GS +7%</span></td>
+        </tr>
+        <tr>
+          <td class="cn">Gross Margin (Non-GAAP)</td>
+          <td class="ca">36.9%</td>
+          <td class="cb"><span class="chip g">+287 bps vs GS</span></td>
+        </tr>
+        <tr>
+          <td class="cn">EBIT Margin</td>
+          <td class="ca">13.3%</td>
+          <td class="cb"><span class="chip g">+262 bps vs GS</span></td>
+        </tr>
+        <tr>
+          <td class="cn">EPS (Non-GAAP)</td>
+          <td class="ca">$0.79</td>
+          <td class="cb"><span class="chip g">+48% vs GS $0.54</span></td>
+        </tr>
+        <tr>
+          <td class="cn">Cloud &amp; AI EBIT Margin</td>
+          <td class="ca">12.4%</td>
+          <td class="cb"><span class="chip g">vs GS Est. 7.4%</span></td>
+        </tr>
+      </table>
+
+      <div class="seg-title">Segment Revenue Breakdown</div>
+
+      <div class="seg-bar-row">
+        <div class="seg-bar-header">
+          <div class="seg-bar-name">
+            <div class="seg-dot" style="background:#01A982;"></div>
+            Cloud &amp; AI
+          </div>
+          <div class="seg-bar-vals">
+            <span class="seg-val">$7.71B</span>
+            <span class="seg-yoy" style="color:#2e7d32;">+23% YoY</span>
+            <span class="chip g">Beat +12%</span>
+          </div>
+        </div>
+        <div class="seg-track">
+          <div class="seg-fill" style="width:72%;background:#01A982;"></div>
+        </div>
+      </div>
+
+      <div class="seg-bar-row">
+        <div class="seg-bar-header">
+          <div class="seg-bar-name">
+            <div class="seg-dot" style="background:#005a6e;"></div>
+            Networking (Juniper)
+          </div>
+          <div class="seg-bar-vals">
+            <span class="seg-val">$2.69B</span>
+            <span class="seg-yoy" style="color:#2e7d32;">+148% YoY</span>
+            <span class="chip r">Miss -4%</span>
+          </div>
+        </div>
+        <div class="seg-track">
+          <div class="seg-fill" style="width:25%;background:#005a6e;"></div>
+        </div>
+      </div>
+
+      <div class="keyword-tags">
+        <span class="kw-tag hpe">AI Server Rev +142–152% YoY</span>
+        <span class="kw-tag hpe">Cloud &amp; AI EBIT 12.4%</span>
+        <span class="kw-tag hpe">EPS Beat +48% vs GS</span>
+        <span class="kw-tag hpe">Trad. Server Orders +100% YoY</span>
+        <span class="kw-tag hpe">FY26 FCF ≥$3.5B</span>
+        <span class="kw-tag hpe">EBIT Margin +262 bps</span>
+      </div>
+    </div>
+
+    <!-- RIGHT COL -->
+    <div class="col">
+      <div class="col-label">Guidance &amp; Strategic Outlook</div>
+
+      <!-- Q3 FY26 Guidance Box -->
+      <div class="guidance-box" style="background:#f0fdf8;border:1.5px solid #01A982;">
+        <div class="g-tag hpe-text">Q3 FY2026 Guidance</div>
+        <div class="g-value">$11.5–12.1B</div>
+        <div class="g-beat">Revenue vs Consensus $10.9B — <strong>Midpoint +8% Above</strong></div>
+        <div class="g-detail">EPS (Non-GAAP): $0.88–$0.93 vs Consensus $0.58 (Midpoint +57%) · EBIT Margin: Sequential Improvement</div>
+      </div>
+
+      <!-- Mini Stats: FY2026 Full-Year -->
+      <div class="mini-stats">
+        <div class="mini-stat">
+          <div class="ms-val hpe-text">+High</div>
+          <div class="ms-label">FY26 Rev Growth<br>(Teens%, raised from +5–10%)</div>
+        </div>
+        <div class="mini-stat">
+          <div class="ms-val hpe-text">$3.35–3.45</div>
+          <div class="ms-label">FY26 EPS Guide<br>(raised from $2.30–2.50)</div>
+        </div>
+        <div class="mini-stat">
+          <div class="ms-val hpe-text">≥$3.5B</div>
+          <div class="ms-label">FY26 FCF Guide<br>(raised from ≥$2.0B)</div>
+        </div>
+      </div>
+
+      <!-- Logo Hero -->
+      <div class="logo-hero">
+        <svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- HPE stylized circle/hexagon mark -->
+          <circle cx="55" cy="55" r="50" fill="#01A982" opacity="0.10"/>
+          <circle cx="55" cy="55" r="44" fill="none" stroke="#01A982" stroke-width="3"/>
+          <!-- HPE "H" letterform simplified -->
+          <text x="55" y="72" font-family="Inter,sans-serif" font-size="52" font-weight="900" fill="#01A982" text-anchor="middle">H</text>
+        </svg>
+        <div class="logo-wordmark hpe-text">HPE</div>
+      </div>
+
+      <!-- FY2027 Theme Box -->
+      <div class="theme-box" style="border-color:#01A982;background:#f0fdf8;">
+        <div class="tb-title">FY2027 Targets — First-Ever Issued</div>
+        <div class="tb-body">Revenue growth <b>+8–12%</b> · Operating margin <b>12–16%</b> · EPS growth <b>+12–16%</b> · FCF <b>≥$4.5B</b> · ~<b>75%</b> of FCF returned to shareholders. Anchors long-term re-rating thesis.</div>
+      </div>
+
+      <!-- AI Margin Inflection Theme Box -->
+      <div class="theme-box" style="border-color:#005a6e;background:#f0f9fb;">
+        <div class="tb-title">AI Margin Inflection + Broad IT Recovery</div>
+        <div class="tb-body">Cloud &amp; AI EBIT margin of <b>12.4%</b> shattered management's own 7–9% guidance midpoint, confirming AI servers are now <b>profit generators</b>, not just volume drivers. Traditional server orders posting <b>triple-digit YoY growth</b> signals enterprise IT recovery is broadening beyond pure AI.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ZONE 4: BOTTOM BAR -->
+  <div class="bottom-bar hpe-bg">
+    <div style="flex:1;">
+      <div style="font-size:12px;color:rgba(255,255,255,0.85);line-height:1.55;">
+        Goldman Sachs PT $32 based on 11x NTM+1Y EPS · FY26 EBIT growth guided +80–85% YoY · EPS raised 40%+ · Full-year FCF guidance nearly doubled
+      </div>
+    </div>
+    <div style="font-size:15px;font-weight:800;color:#FFE100;letter-spacing:.5px;white-space:nowrap;">Investing Community</div>
+  </div>
+
+</div>
+</body>
+</html>

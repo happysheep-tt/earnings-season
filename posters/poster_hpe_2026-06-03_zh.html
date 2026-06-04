@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HPE 财报海报 — 慧与科技</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#d4d4d4;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:48px 24px}
+.poster{width:900px;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.18)}
+.header{padding:30px 40px 26px;border-bottom:1px solid #ececec;display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+.header-left{flex:1}
+.header h1{font-size:27px;font-weight:900;color:#0f0f0f;line-height:1.2;margin-bottom:8px;letter-spacing:-.5px}
+.header h1 em{font-style:normal}
+.header .sub{font-size:13px;color:#666;line-height:1.55;max-width:560px}
+.stock-badge{flex-shrink:0;border-radius:10px;padding:12px 18px;text-align:center}
+.sb-label{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#aaa;margin-bottom:3px}
+.sb-val{font-size:26px;font-weight:900;letter-spacing:-.5px;line-height:1}
+.sb-sub{font-size:10.5px;color:#aaa;margin-top:3px}
+.body{display:grid;grid-template-columns:1fr 1fr}
+.col{padding:28px 36px}
+.col-left{border-right:1px solid #ececec}
+.keyword-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
+.kw-tag{font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;border:1.5px solid;letter-spacing:.2px;white-space:nowrap}
+.col-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#aaa;margin-bottom:20px}
+.big-num-block{margin-bottom:22px}
+.bn-label{font-size:12px;color:#888;font-weight:500;margin-bottom:2px}
+.bn-value{font-size:42px;font-weight:900;color:#0f0f0f;letter-spacing:-1.5px;line-height:1.05}
+.bn-sub{display:flex;align-items:center;gap:8px;margin-top:5px;font-size:13px;color:#555}
+.chip{display:inline-flex;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.chip.g{background:#e8f5e9;color:#2e7d32}
+.chip.r{background:#fce4ec;color:#c62828}
+.chip.b{background:#e3f2fd;color:#1565c0}
+.chip.n{background:#f5f5f5;color:#555}
+.comp-table{width:100%;border-collapse:collapse;margin-bottom:22px}
+.comp-table tr{border-bottom:1px solid #f4f4f4}
+.comp-table td{padding:9px 0;font-size:13px;vertical-align:middle}
+.comp-table .cn{color:#666;width:130px}
+.comp-table .ca{font-weight:700;color:#111}
+.comp-table .cb{text-align:right}
+.seg-title{font-size:10.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#bbb;margin-bottom:12px}
+.seg-bar-row{margin-bottom:12px}
+.seg-bar-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;font-size:12.5px}
+.seg-bar-name{display:flex;align-items:center;gap:9px;color:#444}
+.seg-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.seg-bar-vals{display:flex;gap:8px;align-items:center}
+.seg-val{font-weight:700;color:#111}
+.seg-yoy{font-size:11.5px;font-weight:700}
+.seg-track{height:7px;background:#f0f0f0;border-radius:4px;overflow:hidden}
+.seg-fill{height:100%;border-radius:4px}
+.guidance-box{border-radius:12px;padding:18px 22px;margin-bottom:14px}
+.g-tag{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+.g-value{font-size:44px;font-weight:900;color:#0f0f0f;letter-spacing:-1.5px;line-height:1.05}
+.g-beat{font-size:13px;color:#555;margin-top:6px}
+.g-beat strong{color:#2e7d32}
+.g-detail{font-size:12px;color:#999;margin-top:5px}
+.mini-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#ececec;border-radius:10px;overflow:hidden;margin-bottom:14px}
+.mini-stat{background:#fff;padding:14px 10px;text-align:center}
+.mini-stat .ms-val{font-size:22px;font-weight:900;letter-spacing:-.5px;line-height:1}
+.mini-stat .ms-label{font-size:10.5px;color:#888;margin-top:3px;line-height:1.3}
+.theme-box{border-left:3px solid;border-radius:0 8px 8px 0;padding:13px 16px;font-size:13px;margin-bottom:10px}
+.theme-box .tb-title{font-weight:700;color:#111;margin-bottom:4px}
+.theme-box .tb-body{color:#555;line-height:1.55}
+.theme-box .tb-body b{color:#333}
+.bottom-bar{padding:15px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.bb-left{display:flex;align-items:center;gap:20px}
+.bb-bank{font-size:13px;font-weight:700;color:#fff}
+.bb-rating{font-size:11px;padding:3px 10px;border-radius:4px;font-weight:600}
+.bb-note{font-size:12px;color:#888}
+.bb-pt-block{text-align:right}
+.bb-pt{font-size:38px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1}
+.bb-pt-sub{font-size:11px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+.bb-brand{font-size:10px;font-weight:600;color:#555;letter-spacing:1px;text-transform:uppercase}
+
+/* Zone 1 analyst bar */
+.analyst-bar{display:flex;align-items:center;justify-content:space-between;padding:22px 40px;gap:16px}
+.ab-bank-name{font-size:28px;font-weight:900;color:#fff;letter-spacing:-.5px;line-height:1.1}
+.ab-bank-sub{display:inline-flex;font-size:13px;font-weight:700;padding:3px 12px;border-radius:4px;margin-top:8px}
+.ab-pt-block{text-align:center}
+.ab-pt-label{font-size:10px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.55);text-transform:uppercase;margin-bottom:4px}
+.ab-pt-val{font-size:52px;font-weight:900;color:#fff;letter-spacing:-2px;line-height:1}
+.ab-pt-delta{font-size:12px;color:rgba(255,255,255,.65);margin-top:5px}
+.ab-company{text-align:right}
+.ab-company-name{font-size:28px;font-weight:900;color:#fff;letter-spacing:-.5px;line-height:1.1}
+.ab-company-sub{font-size:13px;color:rgba(255,255,255,.65);margin-top:5px}
+.logo-hero{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 0 16px;gap:10px}
+.logo-hero .logo-wordmark{font-size:28px;font-weight:900;letter-spacing:-1px}
+
+/* HPE brand color */
+.brand-bg{background:#0096D6}
+.brand-color{color:#0096D6}
+.brand-border{border-color:#0096D6}
+.kw-tag-hpe{border-color:#0096D6;color:#0096D6}
+.theme-box-hpe{border-left-color:#0096D6}
+.guidance-box-hpe{background:#f0f8ff;border:1.5px solid #b3ddf5}
+.g-tag-hpe{color:#0096D6}
+.seg-fill-cloud{background:#0096D6}
+.seg-fill-net{background:#00B4A0}
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- ZONE 1: 分析师栏 -->
+  <div class="analyst-bar brand-bg">
+    <!-- 左：投行 + 评级 -->
+    <div>
+      <div class="ab-bank-name">Goldman Sachs</div>
+      <div>
+        <span class="ab-bank-sub" style="background:#2e7d32;color:#fff;">买入</span>
+      </div>
+    </div>
+
+    <!-- 中：目标价 -->
+    <div class="ab-pt-block">
+      <div class="ab-pt-label">目标价</div>
+      <div class="ab-pt-val">$32</div>
+      <div class="ab-pt-delta">↑ 前目标价未披露 · 基于 11x NTM+1Y EPS · 维持买入</div>
+    </div>
+
+    <!-- 右：公司 -->
+    <div class="ab-company">
+      <div class="ab-company-name">慧与科技</div>
+      <div class="ab-company-sub">NYSE: HPE</div>
+    </div>
+  </div>
+
+  <!-- ZONE 2: 标题区块 -->
+  <div class="header">
+    <div class="header-left">
+      <h1>Cloud &amp; AI 营收与利润率双双<em style="color:#0096D6;">暴打预期</em>，全年 EPS 指引上调逾 40%</h1>
+      <p class="sub">AI服务器 EBIT 利润率达 12.4%，远超高盛预期 7.4% 及管理层指引中点，证明 AI 服务器业务正从"规模扩张"向"利润兑现"加速跃迁；传统服务器订单实现三位数 YoY 增长，企业 IT 整体复苏同步展开，首次发布的 F2027 指引为长期估值重构提供锚点。</p>
+    </div>
+  </div>
+
+  <!-- ZONE 3: 双栏正文 -->
+  <div class="body">
+
+    <!-- 左栏：财务数据 VS. 市场预期 -->
+    <div class="col col-left">
+      <div class="col-label">财务数据 VS. 市场预期</div>
+
+      <!-- 大数字：营收 -->
+      <div class="big-num-block">
+        <div class="bn-label">总营收（Q2 FY2026）</div>
+        <div class="bn-value">$10.7<span style="font-size:22px;font-weight:700;color:#888;"> bn</span></div>
+        <div class="bn-sub">
+          <span class="chip g">超 Goldman Sachs 预期 +7%</span>
+          <span style="color:#999;">vs 共识 $10.9 bn</span>
+        </div>
+      </div>
+
+      <!-- 对比表 -->
+      <table class="comp-table">
+        <tr>
+          <td class="cn">指标</td>
+          <td class="ca">实际值</td>
+          <td class="cb">vs 预期</td>
+        </tr>
+        <tr>
+          <td class="cn">营收</td>
+          <td class="ca">$10.7 bn</td>
+          <td class="cb"><span class="chip g">超预期</span></td>
+        </tr>
+        <tr>
+          <td class="cn">毛利率（Non-GAAP）</td>
+          <td class="ca">36.9%</td>
+          <td class="cb"><span class="chip g">超预期 +518 bps</span></td>
+        </tr>
+        <tr>
+          <td class="cn">EBIT 利润率</td>
+          <td class="ca">13.3%</td>
+          <td class="cb"><span class="chip g">超预期 +319 bps</span></td>
+        </tr>
+        <tr>
+          <td class="cn">EPS（Non-GAAP）</td>
+          <td class="ca">$0.79</td>
+          <td class="cb"><span class="chip g">超预期 +37%</span></td>
+        </tr>
+        <tr>
+          <td class="cn">Cloud &amp; AI 利润率</td>
+          <td class="ca">12.4%</td>
+          <td class="cb"><span class="chip g">超 GS 预期 +500 bps</span></td>
+        </tr>
+      </table>
+
+      <!-- 分部柱状图 -->
+      <div class="seg-title">业务分部营收</div>
+
+      <div class="seg-bar-row">
+        <div class="seg-bar-header">
+          <div class="seg-bar-name">
+            <div class="seg-dot" style="background:#0096D6;"></div>
+            Cloud &amp; AI
+          </div>
+          <div class="seg-bar-vals">
+            <span class="seg-val">$7.707 bn</span>
+            <span class="seg-yoy" style="color:#2e7d32;">YoY +23%</span>
+          </div>
+        </div>
+        <div class="seg-track">
+          <div class="seg-fill seg-fill-cloud" style="width:72%;"></div>
+        </div>
+      </div>
+
+      <div class="seg-bar-row">
+        <div class="seg-bar-header">
+          <div class="seg-bar-name">
+            <div class="seg-dot" style="background:#00B4A0;"></div>
+            Networking（含 Juniper Networks）
+          </div>
+          <div class="seg-bar-vals">
+            <span class="seg-val">$2.690 bn</span>
+            <span class="seg-yoy" style="color:#2e7d32;">YoY +148%</span>
+          </div>
+        </div>
+        <div class="seg-track">
+          <div class="seg-fill seg-fill-net" style="width:25%;"></div>
+        </div>
+      </div>
+
+      <!-- 关键词标签 -->
+      <div class="keyword-tags">
+        <span class="kw-tag kw-tag-hpe">AI服务器 YoY +142~152%</span>
+        <span class="kw-tag kw-tag-hpe">Cloud &amp; AI EBIT 12.4%</span>
+        <span class="kw-tag kw-tag-hpe">毛利率超预期 +518 bps</span>
+        <span class="kw-tag kw-tag-hpe">EPS $0.79 超预期 +48%</span>
+        <span class="kw-tag kw-tag-hpe">传统服务器订单 3位数 YoY</span>
+        <span class="kw-tag kw-tag-hpe">FCF 指引 ≥$3.5 bn</span>
+      </div>
+    </div>
+
+    <!-- 右栏：业绩指引与战略展望 -->
+    <div class="col">
+      <div class="col-label">业绩指引与战略展望</div>
+
+      <!-- 公司 Logo -->
+      <div class="logo-hero">
+        <svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- HPE 六边形 Logo 简化版 -->
+          <polygon points="55,8 97,31 97,79 55,102 13,79 13,31" fill="#0096D6" opacity="0.12"/>
+          <polygon points="55,18 88,37 88,73 55,92 22,73 22,37" fill="none" stroke="#0096D6" stroke-width="3"/>
+          <text x="55" y="63" text-anchor="middle" font-family="Inter,sans-serif" font-weight="900" font-size="26" fill="#0096D6">HPE</text>
+        </svg>
+        <div class="logo-wordmark brand-color">慧与科技</div>
+      </div>
+
+      <!-- F3Q26 指引 -->
+      <div class="guidance-box guidance-box-hpe">
+        <div class="g-tag g-tag-hpe">F3Q26 指引 · EPS（Non-GAAP）</div>
+        <div class="g-value">$0.88–$0.93</div>
+        <div class="g-beat">中值 <strong>超市场共识 +57%</strong>（共识 $0.58）</div>
+        <div class="g-detail">营收指引 $11.5–$12.1 bn，中值超共识 +8%</div>
+      </div>
+
+      <!-- F2026 全年指引 mini 卡片 -->
+      <div class="mini-stats">
+        <div class="mini-stat">
+          <div class="ms-val brand-color">+high-<br><span style="font-size:15px;">teens%</span></div>
+          <div class="ms-label">F2026 营收增长<br>（前指引 +5~10%）</div>
+        </div>
+        <div class="mini-stat">
+          <div class="ms-val brand-color">+80–85%</div>
+          <div class="ms-label">F2026 EBIT YoY<br>（前指引 +32~40%）</div>
+        </div>
+        <div class="mini-stat">
+          <div class="ms-val brand-color">$3.35–$3.45</div>
+          <div class="ms-label">F2026 EPS<br>（前指引 $2.30~$2.50）</div>
+        </div>
+      </div>
+
+      <!-- 主题框 1：F2027 首次指引 -->
+      <div class="theme-box theme-box-hpe" style="border-left-color:#0096D6;">
+        <div class="tb-title">🔭 F2027 框架指引（首次发布）</div>
+        <div class="tb-body">
+          营收增长 <b>8–12%</b>，运营利润率 <b>12–16%</b>，EPS（Non-GAAP）增长 <b>12–16%</b>；
+          FCF 至少 <b>$4.5 bn</b>，约 <b>75%</b> FCF 返还股东，为长期估值重构提供锚点。
+        </div>
+      </div>
+
+      <!-- 主题框 2：AI 利润兑现加速 -->
+      <div class="theme-box theme-box-hpe" style="border-left-color:#00B4A0;">
+        <div class="tb-title">⚡ AI 服务器业务：从规模扩张到利润兑现</div>
+        <div class="tb-body">
+          Cloud &amp; AI EBIT 利润率 <b>12.4%</b>，大幅突破管理层此前给出的 <b>7–9%</b> 中点指引；
+          AI 服务器收入 QoQ 大幅提速，YoY 增长达 <b>+142% 至 +152%</b>，传统服务器订单三位数 YoY 增长，企业 IT 整体复苏同步展开。
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ZONE 4: 底栏 -->
+  <div class="bottom-bar brand-bg">
+    <div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.85);line-height:1.6;">
+        Goldman Sachs 维持买入，目标价 $32，基于 <b style="color:#fff;">11x NTM+1Y EPS</b> 估值；研报撰写时股价 $43.04，目标价隐含约 25.7% 下行空间，反映高盛对现价已充分定价的谨慎判断。
+      </div>
+    </div>
+    <div style="font-size:18px;font-weight:900;color:#FFE100;letter-spacing:1px;white-space:nowrap;">投资社区</div>
+  </div>
+
+</div>
+</body>
+</html>

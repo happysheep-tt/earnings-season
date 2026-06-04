@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NVDA — 英伟达 Computex 三大信号 | Goldman Sachs</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#d4d4d4;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:48px 24px}
+.poster{width:900px;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.18)}
+.header{padding:30px 40px 26px;border-bottom:1px solid #ececec;display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+.header-left{flex:1}
+.header h1{font-size:27px;font-weight:900;color:#0f0f0f;line-height:1.2;margin-bottom:8px;letter-spacing:-.5px}
+.header h1 em{font-style:normal}
+.header .sub{font-size:13px;color:#666;line-height:1.55;max-width:560px}
+.stock-badge{flex-shrink:0;border-radius:10px;padding:12px 18px;text-align:center}
+.sb-label{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#aaa;margin-bottom:3px}
+.sb-val{font-size:26px;font-weight:900;letter-spacing:-.5px;line-height:1}
+.sb-sub{font-size:10.5px;color:#aaa;margin-top:3px}
+.body{display:grid;grid-template-columns:1fr 1fr}
+.col{padding:28px 36px}
+.col-left{border-right:1px solid #ececec}
+.keyword-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
+.kw-tag{font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;border:1.5px solid;letter-spacing:.2px;white-space:nowrap}
+.col-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#aaa;margin-bottom:20px}
+.big-num-block{margin-bottom:22px}
+.bn-label{font-size:12px;color:#888;font-weight:500;margin-bottom:2px}
+.bn-value{font-size:42px;font-weight:900;color:#0f0f0f;letter-spacing:-1.5px;line-height:1.05}
+.bn-sub{display:flex;align-items:center;gap:8px;margin-top:5px;font-size:13px;color:#555}
+.chip{display:inline-flex;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.chip.g{background:#e8f5e9;color:#2e7d32}
+.chip.r{background:#fce4ec;color:#c62828}
+.chip.b{background:#e3f2fd;color:#1565c0}
+.chip.n{background:#f5f5f5;color:#555}
+.comp-table{width:100%;border-collapse:collapse;margin-bottom:22px}
+.comp-table tr{border-bottom:1px solid #f4f4f4}
+.comp-table td{padding:9px 0;font-size:13px;vertical-align:middle}
+.comp-table .cn{color:#666;width:130px}
+.comp-table .ca{font-weight:700;color:#111}
+.comp-table .cb{text-align:right}
+.seg-title{font-size:10.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#bbb;margin-bottom:12px}
+.seg-bar-row{margin-bottom:12px}
+.seg-bar-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;font-size:12.5px}
+.seg-bar-name{display:flex;align-items:center;gap:9px;color:#444}
+.seg-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.seg-bar-vals{display:flex;gap:8px;align-items:center}
+.seg-val{font-weight:700;color:#111}
+.seg-yoy{font-size:11.5px;font-weight:700}
+.seg-track{height:7px;background:#f0f0f0;border-radius:4px;overflow:hidden}
+.seg-fill{height:100%;border-radius:4px}
+.guidance-box{border-radius:12px;padding:18px 22px;margin-bottom:14px}
+.g-tag{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+.g-value{font-size:44px;font-weight:900;color:#0f0f0f;letter-spacing:-1.5px;line-height:1.05}
+.g-beat{font-size:13px;color:#555;margin-top:6px}
+.g-beat strong{color:#2e7d32}
+.g-detail{font-size:12px;color:#999;margin-top:5px}
+.mini-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#ececec;border-radius:10px;overflow:hidden;margin-bottom:14px}
+.mini-stat{background:#fff;padding:14px 10px;text-align:center}
+.mini-stat .ms-val{font-size:22px;font-weight:900;letter-spacing:-.5px;line-height:1}
+.mini-stat .ms-label{font-size:10.5px;color:#888;margin-top:3px;line-height:1.3}
+.theme-box{border-left:3px solid;border-radius:0 8px 8px 0;padding:13px 16px;font-size:13px;margin-bottom:10px}
+.theme-box .tb-title{font-weight:700;color:#111;margin-bottom:4px}
+.theme-box .tb-body{color:#555;line-height:1.55}
+.theme-box .tb-body b{color:#333}
+.bottom-bar{padding:15px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.bb-left{display:flex;align-items:center;gap:20px}
+.bb-bank{font-size:13px;font-weight:700;color:#fff}
+.bb-rating{font-size:11px;padding:3px 10px;border-radius:4px;font-weight:600}
+.bb-note{font-size:12px;color:#888}
+.bb-pt-block{text-align:right}
+.bb-pt{font-size:38px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1}
+.bb-pt-sub{font-size:11px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+.bb-brand{font-size:10px;font-weight:600;color:#555;letter-spacing:1px;text-transform:uppercase}
+.analyst-bar{display:flex;align-items:center;justify-content:space-between;padding:22px 40px;gap:16px}
+.ab-bank-name{font-size:28px;font-weight:900;color:#fff;letter-spacing:-.5px;line-height:1.1}
+.ab-bank-sub{display:inline-flex;font-size:13px;font-weight:700;padding:3px 12px;border-radius:4px;margin-top:8px}
+.ab-pt-block{text-align:center}
+.ab-pt-label{font-size:10px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.55);text-transform:uppercase;margin-bottom:4px}
+.ab-pt-val{font-size:52px;font-weight:900;color:#fff;letter-spacing:-2px;line-height:1}
+.ab-pt-delta{font-size:12px;color:rgba(255,255,255,.65);margin-top:5px}
+.ab-company{text-align:right}
+.ab-company-name{font-size:28px;font-weight:900;color:#fff;letter-spacing:-.5px;line-height:1.1}
+.ab-company-sub{font-size:13px;color:rgba(255,255,255,.65);margin-top:5px}
+.logo-hero{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 0;gap:12px}
+.logo-hero .logo-wordmark{font-size:28px;font-weight:900;letter-spacing:-1px}
+
+/* NVDA Brand */
+.nvda-bg{background:#76b900}
+.nvda-color{color:#76b900}
+.nvda-border{border-color:#76b900}
+.nvda-fill{background:#76b900}
+.kw-tag.nvda{border-color:#76b900;color:#76b900;background:transparent}
+.theme-box.nvda{border-left-color:#76b900}
+.guidance-box.nvda{background:#f2f9e6;border:1.5px solid #c8e87a}
+.g-tag.nvda{color:#76b900}
+.seg-yoy.up{color:#76b900}
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- ZONE 1: 分析师栏 -->
+  <div class="analyst-bar nvda-bg">
+    <!-- 左: 投行 + 评级 -->
+    <div>
+      <div class="ab-bank-name">Goldman Sachs</div>
+      <div>
+        <span class="ab-bank-sub" style="background:rgba(255,255,255,0.25);color:#fff;">买入</span>
+      </div>
+    </div>
+
+    <!-- 中: 目标价 -->
+    <div class="ab-pt-block">
+      <div class="ab-pt-label">目标价</div>
+      <div class="ab-pt-val">$285</div>
+      <div class="ab-pt-delta">维持 · 上行空间 35.0% · 基于 30X P/E × EPS $9.50</div>
+    </div>
+
+    <!-- 右: 公司 -->
+    <div class="ab-company">
+      <div class="ab-company-name">英伟达</div>
+      <div class="ab-company-sub">NASDAQ: NVDA</div>
+    </div>
+  </div>
+
+  <!-- ZONE 2: 标题区块 -->
+  <div class="header">
+    <div class="header-left">
+      <h1>Vera Rubin 量产启动 + RTX Spark 进军 AI PC<br><em>Computex 三大信号同步超预期，软硬护城河全面加深</em></h1>
+      <div class="sub">
+        高盛维持买入评级：Vera Rubin 收入爬坡斜率显著陡于 Blackwell，3Q起加速放量；RTX Spark 联合联发科与微软剑指高端 AI 工作流；企业级智能体软件生态（NemoClaw、Nemotron 3 Ultra、CUDA-X Agent Skills）密集落地，平台壁垒持续强化。
+      </div>
+    </div>
+  </div>
+
+  <!-- ZONE 3: 双栏正文 -->
+  <div class="body">
+
+    <!-- 左列: 财务数据 -->
+    <div class="col col-left">
+      <div class="col-label">财务数据 VS. 市场预期</div>
+
+      <!-- 大数字: FY1/27E 营收 -->
+      <div class="big-num-block">
+        <div class="bn-label">FY1/27E 营收（高盛预测）</div>
+        <div class="bn-value" style="font-size:36px;">$410,854M</div>
+        <div class="bn-sub">
+          <span class="chip g">超预期</span>
+          <span>YoY 强劲增长 · AI 基础设施需求持续扩张</span>
+        </div>
+      </div>
+
+      <!-- 对比表格 -->
+      <table class="comp-table">
+        <tr>
+          <td class="cn">FY1/27E EPS</td>
+          <td class="ca">$9.50</td>
+          <td class="cb"><span class="chip g">超预期</span></td>
+        </tr>
+        <tr>
+          <td class="cn">FY1/27E P/E</td>
+          <td class="ca">22.2X</td>
+          <td class="cb"><span class="chip n">符合</span></td>
+        </tr>
+        <tr>
+          <td class="cn">FY1/27E EV/EBITDA</td>
+          <td class="ca">18.1X</td>
+          <td class="cb"><span class="chip g">超预期</span></td>
+        </tr>
+        <tr>
+          <td class="cn">FY1/27E FCF yield</td>
+          <td class="ca">3.8%</td>
+          <td class="cb"><span class="chip n">符合</span></td>
+        </tr>
+        <tr>
+          <td class="cn">FY1/28E 营收</td>
+          <td class="ca">$635,120M</td>
+          <td class="cb"><span class="chip g">超预期</span></td>
+        </tr>
+        <tr>
+          <td class="cn">FY1/29E 营收</td>
+          <td class="ca">$790,023M</td>
+          <td class="cb"><span class="chip g">超预期</span></td>
+        </tr>
+      </table>
+
+      <!-- 分季度 EPS 预测柱状图 -->
+      <div class="seg-title">分季度 EPS 预测</div>
+
+      <div class="seg-bar-row">
+        <div class="seg-bar-header">
+          <div class="seg-bar-name">
+            <div class="seg-dot" style="background:#76b900;"></div>
+            <span>4/26（已公布）</span>
+          </div>
+          <div class="seg-bar-vals">
+            <span class="seg-val">$1.87</span>
+            <span class="seg-yoy up">基准季</span>
+          </div>
+        </div>
+        <div class="seg-track"><div class="seg-fill" style="background:#76b900;width:38%;"></div></div>
+      </div>
+
+      <div class="seg-bar-row">
+        <div class="seg-bar-header">
+          <div class="seg-bar-name">
+            <div class="seg-dot" style="background:#5a9200;"></div>
+            <span>7/26E</span>
+          </div>
+          <div class="seg-bar-vals">
+            <span class="seg-val">$2.12</span>
+            <span class="seg-yoy up">+13.4% QoQ</span>
+          </div>
+        </div>
+        <div class="seg-track"><div class="seg-fill" style="background:#5a9200;width:51%;"></div></div>
+      </div>
+
+      <div class="seg-bar-row">
+        <div class="seg-bar-header">
+          <div class="seg-bar-name">
+            <div class="seg-dot" style="background:#3d6600;"></div>
+            <span>10/26E</span>
+          </div>
+          <div class="seg-bar-vals">
+            <span class="seg-val">$2.56</span>
+            <span class="seg-yoy up">+20.8% QoQ</span>
+          </div>
+        </div>
+        <div class="seg-track"><div class="seg-fill" style="background:#3d6600;width:68%;"></div></div>
+      </div>
+
+      <div class="seg-bar-row">
+        <div class="seg-bar-header">
+          <div class="seg-bar-name">
+            <div class="seg-dot" style="background:#203800;"></div>
+            <span>1/27E</span>
+          </div>
+          <div class="seg-bar-vals">
+            <span class="seg-val">$2.95</span>
+            <span class="seg-yoy up">+15.2% QoQ</span>
+          </div>
+        </div>
+        <div class="seg-track"><div class="seg-fill" style="background:#203800;width:85%;"></div></div>
+      </div>
+
+      <!-- 关键词标签 -->
+      <div class="keyword-tags">
+        <span class="kw-tag nvda">Vera Rubin 爬坡 &gt; Blackwell</span>
+        <span class="kw-tag nvda">智能体吞吐量 10X↑</span>
+        <span class="kw-tag nvda">FY1/28E EPS $15.25</span>
+        <span class="kw-tag nvda">FCF yield 3.8%</span>
+        <span class="kw-tag nvda">EV/EBITDA 18.1X</span>
+        <span class="kw-tag nvda">P/E 22.2X</span>
+      </div>
+    </div>
+
+    <!-- 右列: 指引与展望 -->
+    <div class="col">
+      <div class="col-label">业绩指引与战略展望</div>
+
+      <!-- LOGO -->
+      <div class="logo-hero">
+        <svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- NVDA eye shape -->
+          <ellipse cx="55" cy="55" rx="52" ry="52" fill="#f2f9e6"/>
+          <!-- Stylized NVIDIA eye mark -->
+          <path d="M55 28 C35 28 18 42 18 55 C18 68 35 82 55 82 C75 82 92 68 92 55 C92 42 75 28 55 28Z" fill="#76b900" opacity="0.15"/>
+          <path d="M55 36 C40 36 26 46 26 55 C26 64 40 74 55 74 C70 74 84 64 84 55 C84 46 70 36 55 36Z" fill="#76b900" opacity="0.25"/>
+          <!-- Eye shape -->
+          <path d="M20 55 Q55 20 90 55 Q55 90 20 55Z" fill="#76b900"/>
+          <!-- Pupil -->
+          <circle cx="55" cy="55" r="14" fill="#fff"/>
+          <circle cx="55" cy="55" r="8" fill="#76b900"/>
+          <circle cx="55" cy="55" r="3" fill="#fff"/>
+        </svg>
+        <div class="logo-wordmark nvda-color">英伟达 NVDA</div>
+      </div>
+
+      <!-- 指引高亮框 -->
+      <div class="guidance-box nvda">
+        <div class="g-tag nvda">FY1/28E 收入展望（高盛预测）</div>
+        <div class="g-value">$635B</div>
+        <div class="g-beat">较 FY1/27E <strong>+54.6% YoY</strong>，AI 基础设施超级周期延续</div>
+        <div class="g-detail">FY1/29E 营收进一步升至 $790B · EPS $19.50</div>
+      </div>
+
+      <!-- 迷你统计 -->
+      <div class="mini-stats">
+        <div class="mini-stat">
+          <div class="ms-val nvda-color">$9.50</div>
+          <div class="ms-label">FY1/27E<br>EPS</div>
+        </div>
+        <div class="mini-stat">
+          <div class="ms-val nvda-color">30X</div>
+          <div class="ms-label">目标价<br>P/E 倍数</div>
+        </div>
+        <div class="mini-stat">
+          <div class="ms-val nvda-color">35%</div>
+          <div class="ms-label">目标价<br>上行空间</div>
+        </div>
+      </div>
+
+      <!-- 主题框 1: Vera Rubin -->
+      <div class="theme-box nvda">
+        <div class="tb-title">🚀 Vera Rubin 平台全面量产</div>
+        <div class="tb-body">NVL72 GPU + Vera CPU + Spectrum-X 组成 AI 工厂系统；智能体吞吐量较 Blackwell 提升 <b>10X</b>，性能较 X86 系统提升 <b>1.8X</b>；高盛预计 <b>3Q 起加速放量</b>，爬坡斜率显著陡于前代。</div>
+      </div>
+
+      <!-- 主题框 2: RTX Spark -->
+      <div class="theme-box nvda">
+        <div class="tb-title">💻 RTX Spark 进军 AI PC 市场</div>
+        <div class="tb-body">联合微软、联发科，以 NVLink 融合 Blackwell RTX GPU 与 20核 Grace CPU；联合华硕、戴尔、惠普、联想、微星、宏碁、技嘉等 OEM，<b>今秋正式发布</b>，有望激活 Windows on ARM 生态。</div>
+      </div>
+
+      <!-- 主题框 3: 软件生态 -->
+      <div class="theme-box nvda">
+        <div class="tb-title">🤖 企业级智能体软件生态落地</div>
+        <div class="tb-body">NemoClaw、Nemotron 3 Ultra、CUDA-X Agent Skills 密集发布；Physical AI 三驾马车：<b>Cosmos v3</b> 多模态模型 + <b>Alpamayo v2</b> 自动驾驶平台 + <b>Isaac Gr00t</b> + Jetson Thor 人形机器人参考设计。</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ZONE 4: 底栏 -->
+  <div class="bottom-bar nvda-bg">
+    <div style="font-size:12px;color:rgba(255,255,255,0.82);flex:1;line-height:1.55;">
+      高盛估值依据：标准化 EPS $9.50 × 30X P/E = 目标价 $285；主要风险：AI基础设施支出放缓、竞争导致份额流失及毛利率压缩、供应链约束。仅供社区讨论，不构成投资建议。
+    </div>
+    <div style="font-size:16px;font-weight:900;color:#FFE100;letter-spacing:.5px;flex-shrink:0;">
+      投资社区
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

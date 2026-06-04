@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jefferies Software / Internet / AI Conference Recap</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#d4d4d4;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:48px 24px}
+.poster{width:900px;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.18)}
+.header{padding:30px 40px 26px;border-bottom:1px solid #ececec;display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+.header-left{flex:1}
+.header h1{font-size:27px;font-weight:900;color:#0f0f0f;line-height:1.2;margin-bottom:8px;letter-spacing:-.5px}
+.header h1 em{font-style:normal}
+.header .sub{font-size:13px;color:#666;line-height:1.55;max-width:560px}
+.stock-badge{flex-shrink:0;border-radius:10px;padding:12px 18px;text-align:center}
+.sb-label{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#aaa;margin-bottom:3px}
+.sb-val{font-size:26px;font-weight:900;letter-spacing:-.5px;line-height:1}
+.sb-sub{font-size:10.5px;color:#aaa;margin-top:3px}
+.body{display:grid;grid-template-columns:1fr 1fr}
+.col{padding:28px 36px}
+.col-left{border-right:1px solid #ececec}
+.keyword-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
+.kw-tag{font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;border:1.5px solid;letter-spacing:.2px;white-space:nowrap}
+.col-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#aaa;margin-bottom:20px}
+.big-num-block{margin-bottom:22px}
+.bn-label{font-size:12px;color:#888;font-weight:500;margin-bottom:2px}
+.bn-value{font-size:42px;font-weight:900;color:#0f0f0f;letter-spacing:-1.5px;line-height:1.05}
+.bn-sub{display:flex;align-items:center;gap:8px;margin-top:5px;font-size:13px;color:#555}
+.chip{display:inline-flex;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.chip.g{background:#e8f5e9;color:#2e7d32}
+.chip.r{background:#fce4ec;color:#c62828}
+.chip.b{background:#e3f2fd;color:#1565c0}
+.chip.n{background:#f5f5f5;color:#555}
+.comp-table{width:100%;border-collapse:collapse;margin-bottom:22px}
+.comp-table tr{border-bottom:1px solid #f4f4f4}
+.comp-table td{padding:9px 0;font-size:13px;vertical-align:middle}
+.comp-table .cn{color:#666;width:130px}
+.comp-table .ca{font-weight:700;color:#111}
+.comp-table .cb{text-align:right}
+.seg-title{font-size:10.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#bbb;margin-bottom:12px}
+.seg-bar-row{margin-bottom:12px}
+.seg-bar-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;font-size:12.5px}
+.seg-bar-name{display:flex;align-items:center;gap:9px;color:#444}
+.seg-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.seg-bar-vals{display:flex;gap:8px;align-items:center}
+.seg-val{font-weight:700;color:#111}
+.seg-yoy{font-size:11.5px;font-weight:700}
+.seg-track{height:7px;background:#f0f0f0;border-radius:4px;overflow:hidden}
+.seg-fill{height:100%;border-radius:4px}
+.guidance-box{border-radius:12px;padding:18px 22px;margin-bottom:14px}
+.g-tag{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+.g-value{font-size:44px;font-weight:900;color:#0f0f0f;letter-spacing:-1.5px;line-height:1.05}
+.g-beat{font-size:13px;color:#555;margin-top:6px}
+.g-beat strong{color:#2e7d32}
+.g-detail{font-size:12px;color:#999;margin-top:5px}
+.mini-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#ececec;border-radius:10px;overflow:hidden;margin-bottom:14px}
+.mini-stat{background:#fff;padding:14px 10px;text-align:center}
+.mini-stat .ms-val{font-size:22px;font-weight:900;letter-spacing:-.5px;line-height:1}
+.mini-stat .ms-label{font-size:10.5px;color:#888;margin-top:3px;line-height:1.3}
+.theme-box{border-left:3px solid;border-radius:0 8px 8px 0;padding:13px 16px;font-size:13px;margin-bottom:10px}
+.theme-box .tb-title{font-weight:700;color:#111;margin-bottom:4px}
+.theme-box .tb-body{color:#555;line-height:1.55}
+.theme-box .tb-body b{color:#333}
+.bottom-bar{padding:15px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.bb-left{display:flex;align-items:center;gap:20px}
+.bb-bank{font-size:13px;font-weight:700;color:#fff}
+.bb-rating{font-size:11px;padding:3px 10px;border-radius:4px;font-weight:600}
+.bb-note{font-size:12px;color:#888}
+.bb-pt-block{text-align:right}
+.bb-pt{font-size:38px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1}
+.bb-pt-sub{font-size:11px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+.bb-brand{font-size:10px;font-weight:600;color:#555;letter-spacing:1px;text-transform:uppercase}
+
+.coll-head{padding:26px 36px}
+.coll-src{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.coll-title{font-size:32px;font-weight:900;color:#fff;letter-spacing:-.5px;line-height:1.1;margin:6px 0}
+.coll-sub{font-size:14px;color:rgba(255,255,255,.82);line-height:1.4}
+.tk-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:28px 36px}
+.tk-card{border:1px solid #e3e8f0;border-radius:12px;padding:18px 20px;background:#fff}
+.tk-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:4px}
+.tk-name{font-size:18px;font-weight:900;color:#14213d;line-height:1.1}
+.tk-chip{font-size:13px;font-weight:800;padding:4px 10px;border-radius:6px;color:#fff;white-space:nowrap}
+.tk-chip.up{background:#15a34a}
+.tk-chip.down{background:#dc2626}
+.tk-chip.flat{background:#6b7280}
+.tk-sub{font-size:12px;color:#6b7280;margin-bottom:10px}
+.tk-card ul{margin:0;padding-left:16px}
+.tk-card li{font-size:13px;color:#374151;margin:4px 0;line-height:1.42}
+.coll-foot{display:flex;justify-content:space-between;align-items:center;padding:16px 36px}
+.coll-foot .left{font-size:12px;color:rgba(255,255,255,.85)}
+.coll-foot .right{font-size:14px;font-weight:900;color:#FFE100}
+
+/* Additional overrides */
+.coll-head{background:#1B2A4A}
+.coll-foot{background:#1B2A4A}
+.theme-stripe{background:#f8fafc;padding:16px 36px 4px;border-top:1px solid #ececec;border-bottom:1px solid #ececec}
+.theme-stripe-inner{display:flex;gap:12px;flex-wrap:wrap;padding-bottom:14px}
+.ts-pill{background:#e8f0fe;color:#1B2A4A;font-size:11.5px;font-weight:700;padding:5px 13px;border-radius:20px;letter-spacing:.3px}
+.ts-pill.warn{background:#fff3e0;color:#b45309}
+.divider-label{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#aaa;padding:0 36px;margin:8px 0 0}
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- ZONE 1: HEADER BAND -->
+  <div class="coll-head">
+    <div class="coll-src">Jefferies Research &nbsp;·&nbsp; Annual Tech Conference Recap</div>
+    <div class="coll-title">Software, Internet &amp; AI Conference</div>
+    <div class="coll-sub">60+ companies, PE &amp; VC represented — the tone was more bullish than stock prices reflect; AI inference demand and the "token path" are the defining battle for enterprise software winners in 2025–2026.</div>
+  </div>
+
+  <!-- THEME PILLS -->
+  <div class="theme-stripe">
+    <div class="theme-stripe-inner">
+      <span class="ts-pill">🔥 AI Inference Demand Surge</span>
+      <span class="ts-pill">🪙 Token-Path Positioning</span>
+      <span class="ts-pill">📊 Data Gravity Lock-in</span>
+      <span class="ts-pill">🌐 International Expansion</span>
+      <span class="ts-pill warn">⚠️ Data Center Saturation Risk 2027+</span>
+      <span class="ts-pill warn">⚠️ Sentiment vs. Fundamentals Gap</span>
+    </div>
+  </div>
+
+  <!-- ZONE 2: TICKER CARD GRID -->
+  <div class="tk-grid">
+
+    <!-- SNOW -->
+    <div class="tk-card">
+      <div class="tk-top">
+        <span class="tk-name">Snowflake</span>
+        <span class="tk-chip down">$261.14 &nbsp;−6.8%</span>
+      </div>
+      <div class="tk-sub">NASDAQ: SNOW &nbsp;·&nbsp; After-Hrs: $258.29 (−1.09%)</div>
+      <ul>
+        <li><strong>Cleanest software growth story</strong> at the conference — agentic AI workloads directly drive query volume and compute consumption.</li>
+        <li><strong>Data gravity</strong> locks enterprise AI firmly inside the platform; displacement risk seen as minimal.</li>
+        <li><strong>Cortex Code &amp; Snowflake Intelligence</strong> are already making a more meaningful revenue contribution; token-path advantage confirmed in the most recent earnings.</li>
+      </ul>
+    </div>
+
+    <!-- CRWV -->
+    <div class="tk-card">
+      <div class="tk-top">
+        <span class="tk-name">CoreWeave</span>
+        <span class="tk-chip down">$119.27 &nbsp;−4.4%</span>
+      </div>
+      <div class="tk-sub">NASDAQ: CRWV &nbsp;·&nbsp; After-Hrs: $119.22 (−0.04%)</div>
+      <ul>
+        <li><strong>CFO Nitin Agrawal</strong> confirmed demand is now dominated by <em>inference</em> workloads, validating that customer AI projects generate real ROI.</li>
+        <li>First <strong>owned data center</strong> goes live in 2026; contracts lock in revenue and most cost structure at signing, creating highly predictable contribution margins.</li>
+        <li><strong>EBIT margin inflection</strong> expected Q2–Q3; Network, CPU &amp; Software lines each targeting $100M+ ARR by end-2026.</li>
+      </ul>
+    </div>
+
+    <!-- TEAM -->
+    <div class="tk-card">
+      <div class="tk-top">
+        <span class="tk-name">Atlassian</span>
+        <span class="tk-chip down">$109.10 &nbsp;−5.9%</span>
+      </div>
+      <div class="tk-sub">NASDAQ: TEAM &nbsp;·&nbsp; After-Hrs: $108.00 (−1.01%)</div>
+      <ul>
+        <li>New CFO James Chuong: <strong>65–77% of Jira, Confluence &amp; JSM users are non-developers</strong> — directly refutes the bear thesis that AI will displace TEAM's core user base.</li>
+        <li><strong>Teamwork Graph</strong> improves Claude Code answer quality +44% while cutting token consumption −48%; Teamwork Collection drives higher ARPU &amp; AI credit usage.</li>
+        <li>FY27 revenue will show <strong>negative growth</strong> due to large-deal pull-forward recognition; reacceleration expected in FY28.</li>
+      </ul>
+    </div>
+
+    <!-- PCOR -->
+    <div class="tk-card">
+      <div class="tk-top">
+        <span class="tk-name">Procore Technologies</span>
+        <span class="tk-chip down">$52.70 &nbsp;−4.6%</span>
+      </div>
+      <div class="tk-sub">NYSE: PCOR &nbsp;·&nbsp; After-Hrs: $52.70 (0.00%)</div>
+      <ul>
+        <li>New management team (from Ansys) is integrating smoothly; CEO Ajei Gopal expects <strong>GTM disruption far smaller</strong> than the playbook from 18 months ago.</li>
+        <li><strong>Data moat &amp; system-of-record status</strong> (half of clients run total construction volume on platform) makes vibe-coding displacement risk negligible; industry expert calls it the best construction software in a 25-year career.</li>
+        <li><strong>International revenue</strong> currently low-teens % vs. Ansys ~50% — a major long-runway expansion opportunity; <strong>Rule of 40</strong> is the anchored medium-term management target.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ZONE 3: BOTTOM BAR -->
+  <div class="coll-foot">
+    <div class="left">⚠️ Key Risk: Data center construction experts warn of potential market saturation in 3–5 years; current build pace sustainability remains an open question. For discussion only — not investment advice.</div>
+    <div class="right">Investing Community</div>
+  </div>
+
+</div>
+</body>
+</html>

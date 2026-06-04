@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSFT — RTX Spark平台发布 · Morgan Stanley</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#d4d4d4;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:48px 24px}
+.poster{width:900px;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.18)}
+.header{padding:30px 40px 26px;border-bottom:1px solid #ececec;display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+.header-left{flex:1}
+.header h1{font-size:27px;font-weight:900;color:#0f0f0f;line-height:1.2;margin-bottom:8px;letter-spacing:-.5px}
+.header h1 em{font-style:normal}
+.header .sub{font-size:13px;color:#666;line-height:1.55;max-width:560px}
+.stock-badge{flex-shrink:0;border-radius:10px;padding:12px 18px;text-align:center}
+.sb-label{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#aaa;margin-bottom:3px}
+.sb-val{font-size:26px;font-weight:900;letter-spacing:-.5px;line-height:1}
+.sb-sub{font-size:10.5px;color:#aaa;margin-top:3px}
+.body{display:grid;grid-template-columns:1fr 1fr}
+.col{padding:28px 36px}
+.col-left{border-right:1px solid #ececec}
+.keyword-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
+.kw-tag{font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;border:1.5px solid;letter-spacing:.2px;white-space:nowrap}
+.col-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#aaa;margin-bottom:20px}
+.big-num-block{margin-bottom:22px}
+.bn-label{font-size:12px;color:#888;font-weight:500;margin-bottom:2px}
+.bn-value{font-size:42px;font-weight:900;color:#0f0f0f;letter-spacing:-1.5px;line-height:1.05}
+.bn-sub{display:flex;align-items:center;gap:8px;margin-top:5px;font-size:13px;color:#555}
+.chip{display:inline-flex;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.chip.g{background:#e8f5e9;color:#2e7d32}
+.chip.r{background:#fce4ec;color:#c62828}
+.chip.b{background:#e3f2fd;color:#1565c0}
+.chip.n{background:#f5f5f5;color:#555}
+.comp-table{width:100%;border-collapse:collapse;margin-bottom:22px}
+.comp-table tr{border-bottom:1px solid #f4f4f4}
+.comp-table td{padding:9px 0;font-size:13px;vertical-align:middle}
+.comp-table .cn{color:#666;width:130px}
+.comp-table .ca{font-weight:700;color:#111}
+.comp-table .cb{text-align:right}
+.seg-title{font-size:10.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#bbb;margin-bottom:12px}
+.seg-bar-row{margin-bottom:12px}
+.seg-bar-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;font-size:12.5px}
+.seg-bar-name{display:flex;align-items:center;gap:9px;color:#444}
+.seg-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.seg-bar-vals{display:flex;gap:8px;align-items:center}
+.seg-val{font-weight:700;color:#111}
+.seg-yoy{font-size:11.5px;font-weight:700}
+.seg-track{height:7px;background:#f0f0f0;border-radius:4px;overflow:hidden}
+.seg-fill{height:100%;border-radius:4px}
+.guidance-box{border-radius:12px;padding:18px 22px;margin-bottom:14px}
+.g-tag{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+.g-value{font-size:44px;font-weight:900;color:#0f0f0f;letter-spacing:-1.5px;line-height:1.05}
+.g-beat{font-size:13px;color:#555;margin-top:6px}
+.g-beat strong{color:#2e7d32}
+.g-detail{font-size:12px;color:#999;margin-top:5px}
+.mini-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#ececec;border-radius:10px;overflow:hidden;margin-bottom:14px}
+.mini-stat{background:#fff;padding:14px 10px;text-align:center}
+.mini-stat .ms-val{font-size:22px;font-weight:900;letter-spacing:-.5px;line-height:1}
+.mini-stat .ms-label{font-size:10.5px;color:#888;margin-top:3px;line-height:1.3}
+.theme-box{border-left:3px solid;border-radius:0 8px 8px 0;padding:13px 16px;font-size:13px;margin-bottom:10px}
+.theme-box .tb-title{font-weight:700;color:#111;margin-bottom:4px}
+.theme-box .tb-body{color:#555;line-height:1.55}
+.theme-box .tb-body b{color:#333}
+.bottom-bar{padding:15px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.bb-left{display:flex;align-items:center;gap:20px}
+.bb-bank{font-size:13px;font-weight:700;color:#fff}
+.bb-rating{font-size:11px;padding:3px 10px;border-radius:4px;font-weight:600}
+.bb-note{font-size:12px;color:#888}
+.bb-pt-block{text-align:right}
+.bb-pt{font-size:38px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1}
+.bb-pt-sub{font-size:11px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+.bb-brand{font-size:10px;font-weight:600;color:#555;letter-spacing:1px;text-transform:uppercase}
+
+.analyst-bar{display:flex;align-items:center;justify-content:space-between;padding:22px 40px;gap:16px}
+.ab-bank-name{font-size:28px;font-weight:900;color:#fff;letter-spacing:-.5px;line-height:1.1}
+.ab-bank-sub{display:inline-flex;font-size:13px;font-weight:700;padding:3px 12px;border-radius:4px;margin-top:8px}
+.ab-pt-block{text-align:center}
+.ab-pt-label{font-size:10px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.55);text-transform:uppercase;margin-bottom:4px}
+.ab-pt-val{font-size:52px;font-weight:900;color:#fff;letter-spacing:-2px;line-height:1}
+.ab-pt-delta{font-size:12px;color:rgba(255,255,255,.65);margin-top:5px}
+.ab-company{text-align:right}
+.ab-company-name{font-size:28px;font-weight:900;color:#fff;letter-spacing:-.5px;line-height:1.1}
+.ab-company-sub{font-size:13px;color:rgba(255,255,255,.65);margin-top:5px}
+.logo-hero{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 0 16px;gap:12px}
+.logo-hero .logo-wordmark{font-size:28px;font-weight:900;letter-spacing:-1px}
+
+/* MSFT brand */
+.brand-bg{background:#00a4ef}
+.brand-color{color:#00a4ef}
+.brand-border{border-color:#00a4ef}
+.kw-tag-msft{border-color:#00a4ef;color:#00a4ef;background:transparent}
+.theme-box-msft{border-left-color:#00a4ef}
+.guidance-box-msft{background:#e8f6fd;border:1.5px solid #b3e0f7}
+.g-tag-msft{color:#00a4ef}
+.seg-fill-msft{background:#00a4ef}
+.seg-fill-msft2{background:#0078d4}
+.seg-fill-msft3{background:#50c0f0}
+.seg-fill-msft4{background:#a0d8ef}
+.seg-yoy-g{color:#2e7d32}
+.divider-line{border:none;border-top:1px solid #ececec;margin:18px 0}
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- ZONE 1: 分析师栏 -->
+  <div class="analyst-bar brand-bg">
+    <!-- LEFT: 投行 + 评级 -->
+    <div>
+      <div class="ab-bank-name">Morgan Stanley</div>
+      <div>
+        <span class="ab-bank-sub" style="background:rgba(255,255,255,0.25);color:#fff;">买入</span>
+      </div>
+    </div>
+
+    <!-- CENTER: 目标价 -->
+    <div class="ab-pt-block">
+      <div class="ab-pt-label">目标价</div>
+      <div class="ab-pt-val">$653</div>
+      <div class="ab-pt-delta">基于 30× CY27e EPS $21.76 · 维持买入</div>
+    </div>
+
+    <!-- RIGHT: 公司 -->
+    <div class="ab-company">
+      <div class="ab-company-name">微软</div>
+      <div class="ab-company-sub">NASDAQ: MSFT</div>
+    </div>
+  </div>
+
+  <!-- ZONE 2: 标题区块 -->
+  <div class="header">
+    <div class="header-left">
+      <h1>联手英伟达推出 RTX Spark 平台<br><em>Windows 押注 Agentic AI 智能体时代</em></h1>
+      <p class="sub">微软与英伟达联合发布 RTX Spark 平台，支持本地运行最高 1200 亿参数大语言模型，标志着 AI 货币化战略从 Azure 云端向端侧计算全面延伸，首款旗舰产品 Surface Laptop Ultra 同步亮相；核心悬念在于能否真正催生新一轮有意义的 Windows 换机潮。</p>
+    </div>
+  </div>
+
+  <!-- ZONE 3: 双栏正文 -->
+  <div class="body">
+
+    <!-- LEFT COL -->
+    <div class="col col-left">
+      <div class="col-label">战略规格 VS. 市场定位</div>
+
+      <!-- Big number block -->
+      <div class="big-num-block">
+        <div class="bn-label">本地推理能力（参数规模）</div>
+        <div class="bn-value">1200亿</div>
+        <div class="bn-sub">
+          <span>LLM 本地运行上限</span>
+          <span class="chip g">端侧AI新里程碑</span>
+        </div>
+      </div>
+
+      <!-- Specs comparison table -->
+      <table class="comp-table">
+        <tr>
+          <td class="cn">处理器架构</td>
+          <td class="ca">NVIDIA Grace CPU + Blackwell RTX</td>
+          <td class="cb"><span class="chip g">全新架构</span></td>
+        </tr>
+        <tr>
+          <td class="cn">统一内存</td>
+          <td class="ca">最高 128GB</td>
+          <td class="cb"><span class="chip g">业界领先</span></td>
+        </tr>
+        <tr>
+          <td class="cn">首发硬件</td>
+          <td class="ca">Surface Laptop Ultra</td>
+          <td class="cb"><span class="chip b">旗舰首款</span></td>
+        </tr>
+        <tr>
+          <td class="cn">OEM 合作伙伴</td>
+          <td class="ca">多家，年内陆续推出</td>
+          <td class="cb"><span class="chip n">生态扩张</span></td>
+        </tr>
+        <tr>
+          <td class="cn">Windows-on-Arm</td>
+          <td class="ca">加速普及部署</td>
+          <td class="cb"><span class="chip g">战略加速</span></td>
+        </tr>
+      </table>
+
+      <!-- Segment bar: 五大战略布局 -->
+      <div class="seg-title">五大战略布局 — 优先级权重</div>
+
+      <div class="seg-bar-row">
+        <div class="seg-bar-header">
+          <div class="seg-bar-name">
+            <div class="seg-dot" style="background:#00a4ef"></div>
+            <span>AI 货币化向端点计算延伸</span>
+          </div>
+          <div class="seg-bar-vals">
+            <span class="seg-val">Azure → Edge</span>
+            <span class="seg-yoy seg-yoy-g">核心</span>
+          </div>
+        </div>
+        <div class="seg-track"><div class="seg-fill seg-fill-msft" style="width:95%"></div></div>
+      </div>
+
+      <div class="seg-bar-row">
+        <div class="seg-bar-header">
+          <div class="seg-bar-name">
+            <div class="seg-dot" style="background:#0078d4"></div>
+            <span>对抗苹果垂直整合战略</span>
+          </div>
+          <div class="seg-bar-vals">
+            <span class="seg-val">竞争定位</span>
+            <span class="seg-yoy seg-yoy-g">重要</span>
+          </div>
+        </div>
+        <div class="seg-track"><div class="seg-fill seg-fill-msft2" style="width:85%"></div></div>
+      </div>
+
+      <div class="seg-bar-row">
+        <div class="seg-bar-header">
+          <div class="seg-bar-name">
+            <div class="seg-dot" style="background:#50c0f0"></div>
+            <span>企业低延迟 / 数据主权需求</span>
+          </div>
+          <div class="seg-bar-vals">
+            <span class="seg-val">本地推理</span>
+            <span class="seg-yoy seg-yoy-g">高需求</span>
+          </div>
+        </div>
+        <div class="seg-track"><div class="seg-fill seg-fill-msft3" style="width:75%"></div></div>
+      </div>
+
+      <div class="seg-bar-row">
+        <div class="seg-bar-header">
+          <div class="seg-bar-name">
+            <div class="seg-dot" style="background:#a0d8ef"></div>
+            <span>加速 Windows-on-Arm 架构普及</span>
+          </div>
+          <div class="seg-bar-vals">
+            <span class="seg-val">架构转型</span>
+            <span class="seg-yoy" style="color:#0078d4">推进中</span>
+          </div>
+        </div>
+        <div class="seg-track"><div class="seg-fill seg-fill-msft4" style="width:65%"></div></div>
+      </div>
+
+      <div class="seg-bar-row">
+        <div class="seg-bar-header">
+          <div class="seg-bar-name">
+            <div class="seg-dot" style="background:#c8e8f8"></div>
+            <span>高端 Windows 设备差异化</span>
+          </div>
+          <div class="seg-bar-vals">
+            <span class="seg-val">溢价生态</span>
+            <span class="seg-yoy" style="color:#0078d4">布局</span>
+          </div>
+        </div>
+        <div class="seg-track"><div class="seg-fill" style="width:55%;background:#c8e8f8"></div></div>
+      </div>
+
+      <!-- Keyword tags -->
+      <div class="keyword-tags">
+        <span class="kw-tag kw-tag-msft">1200亿参数 本地推理</span>
+        <span class="kw-tag kw-tag-msft">128GB 统一内存</span>
+        <span class="kw-tag kw-tag-msft">Surface Laptop Ultra 首发</span>
+        <span class="kw-tag kw-tag-msft">Blackwell RTX + Grace CPU</span>
+        <span class="kw-tag kw-tag-msft">Windows-on-Arm 加速</span>
+        <span class="kw-tag kw-tag-msft">PEG 1.5× 历史中枢</span>
+      </div>
+    </div>
+
+    <!-- RIGHT COL -->
+    <div class="col">
+      <div class="col-label">估值参考与战略展望</div>
+
+      <!-- Guidance box: 目标价核心 -->
+      <div class="guidance-box guidance-box-msft">
+        <div class="g-tag g-tag-msft">Morgan Stanley — 目标价基础</div>
+        <div class="g-value">$653</div>
+        <div class="g-beat">基于 <strong>30× CY27e EPS</strong> · EPS 预测 $21.76</div>
+        <div class="g-detail">PEG 1.5× · 与微软历史估值水平吻合 · 相对同类大型软件股享有溢价</div>
+      </div>
+
+      <!-- Mini stats -->
+      <div class="mini-stats">
+        <div class="mini-stat">
+          <div class="ms-val brand-color">30×</div>
+          <div class="ms-label">CY27e PE 倍数</div>
+        </div>
+        <div class="mini-stat">
+          <div class="ms-val brand-color">$21.76</div>
+          <div class="ms-label">CY27e EPS 预测</div>
+        </div>
+        <div class="mini-stat">
+          <div class="ms-val brand-color">1.5×</div>
+          <div class="ms-label">PEG 历史中枢</div>
+        </div>
+      </div>
+
+      <!-- Logo hero -->
+      <div class="logo-hero">
+        <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Microsoft Windows logo: four colored squares -->
+          <rect x="5" y="5" width="38" height="38" rx="3" fill="#F25022"/>
+          <rect x="47" y="5" width="38" height="38" rx="3" fill="#7FBA00"/>
+          <rect x="5" y="47" width="38" height="38" rx="3" fill="#00A4EF"/>
+          <rect x="47" y="47" width="38" height="38" rx="3" fill="#FFB900"/>
+        </svg>
+        <div class="logo-wordmark brand-color">微软</div>
+      </div>
+
+      <hr class="divider-line">
+
+      <!-- Theme boxes -->
+      <div class="theme-box theme-box-msft" style="border-left-color:#00a4ef">
+        <div class="tb-title">🔑 核心催化剂：换机周期能否开启？</div>
+        <div class="tb-body">早期 Copilot+ PC 市场反响平淡，RTX Spark 平台能否凭借<b>本地 AI 推理能力</b>真正驱动新一轮有意义的换机周期，仍是 Morgan Stanley 关注的核心悬念。多家 OEM 合作伙伴产品将于<b>2025年晚些时候</b>陆续推出，生态扩张效果值得持续跟踪。</div>
+      </div>
+
+      <div class="theme-box" style="border-left-color:#0078d4;border-radius:0 8px 8px 0">
+        <div class="tb-title">🏆 正面竞争苹果垂直整合生态</div>
+        <div class="tb-body">RTX Spark 搭载 Grace CPU 架构 + Blackwell RTX 显卡 + 最高 128GB 统一内存，微软正式向<b>苹果 Apple Silicon 垂直整合</b>硬件/软件生态发起正面挑战，企业端<b>数据主权与隐私保护</b>需求构成天然差异化护城河。</div>
+      </div>
+
+      <div class="theme-box" style="border-left-color:#50c0f0;border-radius:0 8px 8px 0">
+        <div class="tb-title">☁️ AI 变现路径：云端 → 端侧全栈延伸</div>
+        <div class="tb-body">此次发布是微软将 AI 货币化从 <b>Azure 云基础设施</b> 和 <b>Copilot</b> 向端点计算全面延伸的关键战略步骤，有望构建完整的 <b>Agentic AI 智能体</b> 本地计算生态，支撑长期估值溢价。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ZONE 4: 底栏 -->
+  <div class="bottom-bar brand-bg">
+    <div style="font-size:12px;color:rgba(255,255,255,0.82);line-height:1.5;flex:1">
+      Morgan Stanley 估值基于 30× CY27e EPS $21.76，PEG 1.5× 与微软历史水平吻合，相对同类大型软件股享有估值溢价；AI PC 换机周期能否兑现为核心观察变量。
+    </div>
+    <div style="font-size:16px;font-weight:900;color:#FFE100;letter-spacing:.5px;flex-shrink:0">投资社区</div>
+  </div>
+
+</div>
+</body>
+</html>
