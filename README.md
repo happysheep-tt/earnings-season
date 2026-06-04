@@ -36,3 +36,22 @@ python3 generate_posters.py --push
 
 - 所有密钥通过环境变量注入，仓库内不含任何真实凭证。
 - `研报input/`、`海报/`、`output/` 为数据与产物目录，已在 `.gitignore` 中排除。
+
+## 海报示例
+
+工作流为每篇财报简报生成中英文双语海报（900px，下方为 2026-06-03 批次示例）。
+
+### 英伟达 NVDA
+<p><img src="posters/poster_nvda_2026-06-03_zh.png" width="48%"> <img src="posters/poster_nvda_2026-06-03_en.png" width="48%"></p>
+
+### 微软 MSFT
+<p><img src="posters/poster_msft_2026-06-03_zh.png" width="48%"> <img src="posters/poster_msft_2026-06-03_en.png" width="48%"></p>
+
+### 慧与 HPE
+<p><img src="posters/poster_hpe_2026-06-03_zh.png" width="48%"> <img src="posters/poster_hpe_2026-06-03_en.png" width="48%"></p>
+
+### Snowflake SNOW
+<p><img src="posters/poster_snow_2026-06-03_zh.png" width="48%"> <img src="posters/poster_snow_2026-06-03_en.png" width="48%"></p>
+
+### 三星电子 005930.KS
+<p><img src="posters/poster_005930_ks_2026-06-03_zh.png" width="48%"> <img src="posters/poster_005930_ks_2026-06-03_en.png" width="48%"></p>
