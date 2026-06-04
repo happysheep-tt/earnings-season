@@ -31,7 +31,7 @@ OUTPUT = BASE / "output"
 POSTER = BASE / "海报"
 MODEL  = "claude-sonnet-4-6"
 
-_WM_PATH = BASE / "小老虎.jpeg"
+_WM_PATH = BASE / "watermark.png"
 
 sys.path.insert(0, str(BASE))
 import push_feishu as _push
