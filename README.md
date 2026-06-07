@@ -1,57 +1,57 @@
 # Earnings Season Workflow
 
-财报季自动化：把券商研报 PDF 自动转成**投资社区中文简报 + 英文海报 + 中文海报**，合并推送到飞书群。
+Earnings season automation: turn brokerage research PDFs into an **investment-community Chinese brief + English poster + Chinese poster**, then push them together to a Feishu (Lark) group.
 
-## 模块
+## Modules
 
-| 文件 | 职责 |
+| File | Responsibility |
 |------|------|
-| `fetch_prices.py` | Tiger 实时行情 → `market_data.json` |
-| `preprocess_pdfs.py` | PDF 文本提取（PDF 损坏时按需） |
-| `run_workflow.py` | 调 Claude 生成中文 brief |
-| `generate_posters.py` | 生成英文/中文海报、合成水印、推送飞书 |
-| `push_feishu.py` | 飞书 token / 卡片构建 / 图片上传 |
+| `fetch_prices.py` | Tiger real-time quotes → `market_data.json` |
+| `preprocess_pdfs.py` | PDF text extraction (on demand, when a PDF is corrupt) |
+| `run_workflow.py` | Call Claude to generate the Chinese brief |
+| `generate_posters.py` | Generate English/Chinese posters, composite watermark, push to Feishu |
+| `push_feishu.py` | Feishu token / card building / image upload |
 
-## 快速开始
+## Quick Start
 
 ```bash
-# 1. 配置环境变量（见 EARNINGS_SEASON.md）
-export ANTHROPIC_AUTH_TOKEN=...   # 或 ANTHROPIC_API_KEY
+# 1. Configure environment variables (see EARNINGS_SEASON.md)
+export ANTHROPIC_AUTH_TOKEN=...   # or ANTHROPIC_API_KEY
 export FEISHU_APP_SECRET=...
 export FEISHU_WEBHOOK=...
 
-# 2. 研报 PDF 放入 研报input/，拉取行情
+# 2. Put research PDFs into 研报input/, then pull quotes
 python3 fetch_prices.py APP NVDA COST ...
 
-# 3. 生成 brief
+# 3. Generate the brief
 python3 run_workflow.py
 
-# 4. 生成海报并推送
+# 4. Generate posters and push
 python3 generate_posters.py --push
 ```
 
-详细使用手册见 [EARNINGS_SEASON.md](EARNINGS_SEASON.md)，工具拆解见 [workflow_tools.md](workflow_tools.md)，AI 工作规则见 [CLAUDE.md](CLAUDE.md)。
+See [EARNINGS_SEASON.md](EARNINGS_SEASON.md) for the full user manual, [workflow_tools.md](workflow_tools.md) for the tool breakdown, and [CLAUDE.md](CLAUDE.md) for the AI working rules.
 
-## 说明
+## Notes
 
-- 所有密钥通过环境变量注入，仓库内不含任何真实凭证。
-- `研报input/`、`海报/`、`output/` 为数据与产物目录，已在 `.gitignore` 中排除。
+- All secrets are injected via environment variables; the repo contains no real credentials.
+- `研报input/` (research input), `海报/` (posters), and `output/` are data and artifact directories, already excluded in `.gitignore`.
 
-## 海报示例
+## Poster Examples
 
-工作流为每篇财报简报生成中英文双语海报（900px，下方为 2026-06-03 批次示例）。
+The workflow generates a bilingual (Chinese + English) poster for each earnings brief (900px; examples below are from the 2026-06-03 batch).
 
-### 英伟达 NVDA
+### NVIDIA (NVDA)
 <p><img src="posters/poster_nvda_2026-06-03_zh.png" width="48%"> <img src="posters/poster_nvda_2026-06-03_en.png" width="48%"></p>
 
-### 微软 MSFT
+### Microsoft (MSFT)
 <p><img src="posters/poster_msft_2026-06-03_zh.png" width="48%"> <img src="posters/poster_msft_2026-06-03_en.png" width="48%"></p>
 
-### 慧与 HPE
+### Hewlett Packard Enterprise (HPE)
 <p><img src="posters/poster_hpe_2026-06-03_zh.png" width="48%"> <img src="posters/poster_hpe_2026-06-03_en.png" width="48%"></p>
 
-### Snowflake SNOW
+### Snowflake (SNOW)
 <p><img src="posters/poster_snow_2026-06-03_zh.png" width="48%"> <img src="posters/poster_snow_2026-06-03_en.png" width="48%"></p>
 
-### 三星电子 005930.KS
+### Samsung Electronics (005930.KS)
 <p><img src="posters/poster_005930_ks_2026-06-03_zh.png" width="48%"> <img src="posters/poster_005930_ks_2026-06-03_en.png" width="48%"></p>
